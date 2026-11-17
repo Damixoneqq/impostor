@@ -1,633 +1,623 @@
 /**
  * Baza słów dla gry "Impostor" (kalkulator ról / master screen pass-and-play).
- * Zawiera 1026 unikalnych polskich słów z jedno-słownymi, subtelnymi podpowiedziami.
+ * Zawiera 1055 unikalnych, wyłącznie jedno-słownych polskich haseł z jedno-słownymi, subtelnymi podpowiedziami.
  */
 (function(root) {
   const IMPOSTOR_WORDS = [
   {
     "word": "Pies",
     "category": "Zwierzęta",
-    "hint": "Smycz"
+    "hint": "Wierność"
   },
   {
     "word": "Kot",
     "category": "Zwierzęta",
-    "hint": "Mruczenie"
+    "hint": "Niezależność"
   },
   {
     "word": "Koń",
     "category": "Zwierzęta",
-    "hint": "Kopyta"
+    "hint": "Przestrzeń"
   },
   {
     "word": "Krowa",
     "category": "Zwierzęta",
-    "hint": "Łąka"
+    "hint": "Spokój"
   },
   {
     "word": "Owca",
     "category": "Zwierzęta",
-    "hint": "Wełna"
+    "hint": "Stado"
   },
   {
     "word": "Świnia",
     "category": "Zwierzęta",
-    "hint": "Koryto"
+    "hint": "Róż"
   },
   {
     "word": "Koza",
     "category": "Zwierzęta",
-    "hint": "Skały"
+    "hint": "Upartość"
   },
   {
     "word": "Kura",
     "category": "Zwierzęta",
-    "hint": "Ziarno"
+    "hint": "Podwórko"
   },
   {
     "word": "Kogut",
     "category": "Zwierzęta",
-    "hint": "Piejący"
+    "hint": "Budzik"
   },
   {
     "word": "Kaczka",
     "category": "Zwierzęta",
-    "hint": "Staw"
+    "hint": "Nawyk"
   },
   {
     "word": "Gęś",
     "category": "Zwierzęta",
-    "hint": "Pióra"
+    "hint": "Klucz"
   },
   {
     "word": "Indyk",
     "category": "Zwierzęta",
-    "hint": "Drobiarstwo"
+    "hint": "Duma"
   },
   {
     "word": "Gołąb",
     "category": "Zwierzęta",
-    "hint": "Rynek"
+    "hint": "Wiadomość"
   },
   {
     "word": "Wróbel",
     "category": "Zwierzęta",
-    "hint": "Dach"
+    "hint": "Szarość"
   },
   {
     "word": "Dzięcioł",
     "category": "Zwierzęta",
-    "hint": "Kora"
+    "hint": "Rytm"
   },
   {
     "word": "Sowa",
     "category": "Zwierzęta",
-    "hint": "Noc"
+    "hint": "Ciemność"
   },
   {
     "word": "Orzeł",
     "category": "Zwierzęta",
-    "hint": "Szczyty"
+    "hint": "Wysokość"
   },
   {
     "word": "Jastrząb",
     "category": "Zwierzęta",
-    "hint": "Drapieżnik"
+    "hint": "Wzrok"
   },
   {
     "word": "Sokół",
     "category": "Zwierzęta",
-    "hint": "Polowanie"
+    "hint": "Czystość"
   },
   {
     "word": "Bocian",
     "category": "Zwierzęta",
-    "hint": "Gniazdo"
+    "hint": "Powrót"
   },
   {
     "word": "Czapla",
     "category": "Zwierzęta",
-    "hint": "Trzcina"
+    "hint": "Cierpliwość"
   },
   {
     "word": "Łabędź",
     "category": "Zwierzęta",
-    "hint": "Jezioro"
+    "hint": "Gracja"
   },
   {
     "word": "Pingwin",
     "category": "Zwierzęta",
-    "hint": "Lód"
+    "hint": "Chłód"
   },
   {
     "word": "Flaming",
     "category": "Zwierzęta",
-    "hint": "Róż"
+    "hint": "Równowaga"
   },
   {
     "word": "Struś",
     "category": "Zwierzęta",
-    "hint": "Bieg"
+    "hint": "Ucieczka"
   },
   {
     "word": "Koliber",
     "category": "Zwierzęta",
-    "hint": "Nektar"
+    "hint": "Lekkość"
   },
   {
     "word": "Papuga",
     "category": "Zwierzęta",
-    "hint": "Dżungla"
+    "hint": "Echo"
   },
   {
     "word": "Tukan",
     "category": "Zwierzęta",
-    "hint": "Dziób"
+    "hint": "Egzotyka"
   },
   {
     "word": "Mewa",
     "category": "Zwierzęta",
-    "hint": "Wybrzeże"
+    "hint": "Szum"
   },
   {
     "word": "Nietoperz",
     "category": "Zwierzęta",
-    "hint": "Jaskinia"
+    "hint": "Dźwięk"
   },
   {
     "word": "Lew",
     "category": "Zwierzęta",
-    "hint": "Sawanna"
+    "hint": "Władza"
   },
   {
     "word": "Tygrys",
     "category": "Zwierzęta",
-    "hint": "Drapieżnik"
+    "hint": "Siła"
   },
   {
     "word": "Lampart",
     "category": "Zwierzęta",
-    "hint": "Plamy"
+    "hint": "Zwinność"
   },
   {
     "word": "Gepard",
     "category": "Zwierzęta",
-    "hint": "Prędkość"
+    "hint": "Pośpiech"
   },
   {
     "word": "Pantera",
     "category": "Zwierzęta",
-    "hint": "Tropiki"
+    "hint": "Tajemnica"
   },
   {
     "word": "Wilk",
     "category": "Zwierzęta",
-    "hint": "Wataha"
+    "hint": "Więź"
   },
   {
     "word": "Lis",
     "category": "Zwierzęta",
-    "hint": "Rudy"
+    "hint": "Spryt"
   },
   {
     "word": "Niedźwiedź",
     "category": "Zwierzęta",
-    "hint": "Gawra"
-  },
-  {
-    "word": "Niedźwiedź polarny",
-    "category": "Zwierzęta",
-    "hint": "Arktyka"
+    "hint": "Ciężar"
   },
   {
     "word": "Panda",
     "category": "Zwierzęta",
-    "hint": "Pędy"
+    "hint": "Spokój"
   },
   {
     "word": "Koala",
     "category": "Zwierzęta",
-    "hint": "Drzewo"
+    "hint": "Drzemka"
   },
   {
     "word": "Żyrafa",
     "category": "Zwierzęta",
-    "hint": "Wysokość"
+    "hint": "Perspektywa"
   },
   {
     "word": "Słoń",
     "category": "Zwierzęta",
-    "hint": "Afryka"
+    "hint": "Pamięć"
   },
   {
     "word": "Nosorożec",
     "category": "Zwierzęta",
-    "hint": "Róg"
+    "hint": "Twardość"
   },
   {
     "word": "Hipopotam",
     "category": "Zwierzęta",
-    "hint": "Błoto"
+    "hint": "Waga"
   },
   {
     "word": "Zebra",
     "category": "Zwierzęta",
-    "hint": "Paski"
+    "hint": "Kontrast"
   },
   {
     "word": "Wielbłąd",
     "category": "Zwierzęta",
-    "hint": "Pustynia"
+    "hint": "Wytrwałość"
   },
   {
     "word": "Kangur",
     "category": "Zwierzęta",
-    "hint": "Torba"
+    "hint": "Energia"
   },
   {
-    "word": "Szop pracz",
+    "word": "Szop",
     "category": "Zwierzęta",
-    "hint": "Maskowanie"
+    "hint": "Czystość"
   },
   {
     "word": "Bóbr",
     "category": "Zwierzęta",
-    "hint": "Rzeka"
+    "hint": "Praca"
   },
   {
     "word": "Wiewiórka",
     "category": "Zwierzęta",
-    "hint": "Dziupla"
+    "hint": "Zapasy"
   },
   {
     "word": "Jeż",
     "category": "Zwierzęta",
-    "hint": "Igły"
+    "hint": "Dystans"
   },
   {
     "word": "Borsuk",
     "category": "Zwierzęta",
-    "hint": "Nora"
+    "hint": "Odosobnienie"
   },
   {
     "word": "Kret",
     "category": "Zwierzęta",
-    "hint": "Kopiec"
+    "hint": "Mrok"
   },
   {
     "word": "Zając",
     "category": "Zwierzęta",
-    "hint": "Miedza"
+    "hint": "Płochliwość"
   },
   {
     "word": "Królik",
     "category": "Zwierzęta",
-    "hint": "Uszy"
+    "hint": "Szybkość"
   },
   {
     "word": "Sarna",
     "category": "Zwierzęta",
-    "hint": "Płochliwość"
+    "hint": "Delikatność"
   },
   {
     "word": "Jeleń",
     "category": "Zwierzęta",
-    "hint": "Poroże"
+    "hint": "Majestat"
   },
   {
     "word": "Łoś",
     "category": "Zwierzęta",
-    "hint": "Bagno"
+    "hint": "Spokój"
   },
   {
     "word": "Żubr",
     "category": "Zwierzęta",
-    "hint": "Puszcza"
+    "hint": "Ostoja"
   },
   {
     "word": "Delfin",
     "category": "Zwierzęta",
-    "hint": "Pływanie"
+    "hint": "Radość"
   },
   {
     "word": "Wieloryb",
     "category": "Zwierzęta",
-    "hint": "Głębia"
+    "hint": "Bezmiar"
   },
   {
     "word": "Orka",
     "category": "Zwierzęta",
-    "hint": "Ocean"
+    "hint": "Spryt"
   },
   {
     "word": "Rekin",
     "category": "Zwierzęta",
-    "hint": "Płetwa"
+    "hint": "Instynkt"
   },
   {
     "word": "Manta",
     "category": "Zwierzęta",
-    "hint": "Woda"
+    "hint": "Szybowanie"
   },
   {
-    "word": "Konik morski",
+    "word": "Pławikonik",
     "category": "Zwierzęta",
-    "hint": "Rafy"
+    "hint": "Miniatura"
   },
   {
     "word": "Ośmiornica",
     "category": "Zwierzęta",
-    "hint": "Głowonóg"
+    "hint": "Zagadka"
   },
   {
     "word": "Kałamarnica",
     "category": "Zwierzęta",
-    "hint": "Macki"
+    "hint": "Głębia"
   },
   {
     "word": "Meduza",
     "category": "Zwierzęta",
-    "hint": "Parzydełko"
+    "hint": "Niewidoczność"
   },
   {
     "word": "Rozgwiazda",
     "category": "Zwierzęta",
-    "hint": "Dno"
+    "hint": "Kształt"
   },
   {
     "word": "Krab",
     "category": "Zwierzęta",
-    "hint": "Szczypce"
+    "hint": "Kierunek"
   },
   {
     "word": "Homar",
     "category": "Zwierzęta",
-    "hint": "Skorupiak"
+    "hint": "Luksus"
   },
   {
     "word": "Krewetka",
     "category": "Zwierzęta",
-    "hint": "Plankton"
+    "hint": "Drobiazg"
   },
   {
     "word": "Żółw",
     "category": "Zwierzęta",
-    "hint": "Pancerz"
+    "hint": "Powolność"
   },
   {
     "word": "Krokodyl",
     "category": "Zwierzęta",
-    "hint": "Bagna"
+    "hint": "Czatowanie"
   },
   {
     "word": "Aligator",
     "category": "Zwierzęta",
-    "hint": "Gady"
+    "hint": "Cierpliwość"
   },
   {
     "word": "Kameleon",
     "category": "Zwierzęta",
-    "hint": "Kamuflaż"
+    "hint": "Dopasowanie"
   },
   {
     "word": "Iguana",
     "category": "Zwierzęta",
-    "hint": "Łuski"
+    "hint": "Ciepło"
   },
   {
     "word": "Wąż",
     "category": "Zwierzęta",
-    "hint": "Pełzanie"
+    "hint": "Pokusa"
   },
   {
     "word": "Kobra",
     "category": "Zwierzęta",
-    "hint": "Kaptur"
+    "hint": "Ostrzeżenie"
   },
   {
     "word": "Żmija",
     "category": "Zwierzęta",
-    "hint": "Zygzak"
+    "hint": "Uwaga"
   },
   {
     "word": "Żaba",
     "category": "Zwierzęta",
-    "hint": "Kumkanie"
+    "hint": "Wilgoć"
   },
   {
     "word": "Ropucha",
     "category": "Zwierzęta",
-    "hint": "Ogród"
+    "hint": "Ochrona"
   },
   {
     "word": "Salamandra",
     "category": "Zwierzęta",
-    "hint": "Ogień"
+    "hint": "Żywioł"
   },
   {
     "word": "Ślimak",
     "category": "Zwierzęta",
-    "hint": "Skorupka"
+    "hint": "Spokój"
   },
   {
     "word": "Motyl",
     "category": "Zwierzęta",
-    "hint": "Skrzydła"
+    "hint": "Przemiana"
   },
   {
     "word": "Ćma",
     "category": "Zwierzęta",
-    "hint": "Światło"
+    "hint": "Przyciąganie"
   },
   {
     "word": "Pszczoła",
     "category": "Zwierzęta",
-    "hint": "Pasieka"
+    "hint": "Zorganizowanie"
   },
   {
     "word": "Osa",
     "category": "Zwierzęta",
-    "hint": "Żądło"
+    "hint": "Natarczywość"
   },
   {
     "word": "Szerszeń",
     "category": "Zwierzęta",
-    "hint": "Owady"
+    "hint": "Groza"
   },
   {
     "word": "Trzmiel",
     "category": "Zwierzęta",
-    "hint": "Łąka"
+    "hint": "Ciężar"
   },
   {
     "word": "Mrówka",
     "category": "Zwierzęta",
-    "hint": "Mrowisko"
+    "hint": "Współpraca"
   },
   {
     "word": "Biedronka",
     "category": "Zwierzęta",
-    "hint": "Kropki"
+    "hint": "Szczęście"
   },
   {
     "word": "Świerszcz",
     "category": "Zwierzęta",
-    "hint": "Dźwięk"
+    "hint": "Wieczór"
   },
   {
     "word": "Pasikonik",
     "category": "Zwierzęta",
-    "hint": "Trawa"
+    "hint": "Skok"
   },
   {
     "word": "Ważka",
     "category": "Zwierzęta",
-    "hint": "Skrzydła"
+    "hint": "Zwrotność"
   },
   {
     "word": "Mucha",
     "category": "Zwierzęta",
-    "hint": "Kołnierzyk"
+    "hint": "Uporczywość"
   },
   {
     "word": "Komar",
     "category": "Zwierzęta",
-    "hint": "Upał"
+    "hint": "Irytacja"
   },
   {
     "word": "Pająk",
     "category": "Zwierzęta",
-    "hint": "Sieć"
+    "hint": "Cierpliwość"
   },
   {
     "word": "Skorpion",
     "category": "Zwierzęta",
-    "hint": "Pustynia"
+    "hint": "Surowość"
   },
   {
     "word": "Leniwiec",
     "category": "Zwierzęta",
-    "hint": "Powolność"
+    "hint": "Czas"
   },
   {
     "word": "Kapibara",
     "category": "Zwierzęta",
-    "hint": "Gryzoń"
+    "hint": "Zgoda"
   },
   {
     "word": "Alpaka",
     "category": "Zwierzęta",
-    "hint": "Wełna"
+    "hint": "Miękkość"
   },
   {
     "word": "Lama",
     "category": "Zwierzęta",
-    "hint": "Andy"
+    "hint": "Duma"
   },
   {
     "word": "Dromader",
     "category": "Zwierzęta",
-    "hint": "Garb"
+    "hint": "Karawana"
   },
   {
     "word": "Wydra",
     "category": "Zwierzęta",
-    "hint": "Nurt"
+    "hint": "Zabawa"
   },
   {
     "word": "Hiena",
     "category": "Zwierzęta",
-    "hint": "Padlina"
+    "hint": "Śmiech"
   },
   {
     "word": "Szakal",
     "category": "Zwierzęta",
-    "hint": "Noc"
+    "hint": "Cień"
   },
   {
     "word": "Dingo",
     "category": "Zwierzęta",
-    "hint": "Australia"
+    "hint": "Dzikość"
   },
   {
     "word": "Suseł",
     "category": "Zwierzęta",
-    "hint": "Norka"
+    "hint": "Czuwanie"
   },
   {
     "word": "Chomik",
     "category": "Zwierzęta",
-    "hint": "Klatka"
-  },
-  {
-    "word": "Świnka morska",
-    "category": "Zwierzęta",
-    "hint": "Gryzoń"
+    "hint": "Oszczędność"
   },
   {
     "word": "Szczur",
     "category": "Zwierzęta",
-    "hint": "Spryt"
+    "hint": "Przetrwanie"
   },
   {
     "word": "Mysz",
     "category": "Zwierzęta",
-    "hint": "Nora"
+    "hint": "Drobność"
   },
   {
     "word": "Fretka",
     "category": "Zwierzęta",
-    "hint": "Zwinność"
+    "hint": "Ciekawość"
   },
   {
     "word": "Pancernik",
     "category": "Zwierzęta",
-    "hint": "Pancerz"
+    "hint": "Obrona"
   },
   {
     "word": "Mrównojad",
     "category": "Zwierzęta",
-    "hint": "Język"
+    "hint": "Nietypowość"
   },
   {
     "word": "Dziobak",
     "category": "Zwierzęta",
-    "hint": "Osobliwość"
+    "hint": "Paradoks"
   },
   {
     "word": "Kolczatka",
     "category": "Zwierzęta",
-    "hint": "Ssaki"
+    "hint": "Najeżenie"
   },
   {
     "word": "Paw",
     "category": "Zwierzęta",
-    "hint": "Pióra"
+    "hint": "Próżność"
   },
   {
     "word": "Pelikan",
     "category": "Zwierzęta",
-    "hint": "Dziób"
+    "hint": "Pojemność"
   },
   {
     "word": "Sęp",
     "category": "Zwierzęta",
-    "hint": "Wysokość"
+    "hint": "Koniec"
   },
   {
     "word": "Kukawka",
     "category": "Zwierzęta",
-    "hint": "Gniazdo"
+    "hint": "Podstęp"
   },
   {
     "word": "Sroka",
     "category": "Zwierzęta",
-    "hint": "Błyskotki"
+    "hint": "Kradzież"
   },
   {
     "word": "Wrona",
     "category": "Zwierzęta",
-    "hint": "Ptak"
+    "hint": "Inteligencja"
   },
   {
     "word": "Kruk",
@@ -637,292 +627,267 @@
   {
     "word": "Dudek",
     "category": "Zwierzęta",
-    "hint": "Czubek"
+    "hint": "Ozdoba"
   },
   {
     "word": "Zimorodek",
     "category": "Zwierzęta",
-    "hint": "Potok"
+    "hint": "Błysk"
   },
   {
     "word": "Pizza",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Piec"
+    "hint": "Wieczór"
   },
   {
     "word": "Burger",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Kotlet"
+    "hint": "Pośpiech"
   },
   {
     "word": "Kebab",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Sos"
-  },
-  {
-    "word": "Hot dog",
-    "category": "Jedzenie i Kulinaria",
-    "hint": "Bułka"
+    "hint": "Noc"
   },
   {
     "word": "Frytki",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Olej"
+    "hint": "Chrupkość"
   },
   {
     "word": "Pierogi",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Ciasto"
+    "hint": "Tradycja"
   },
   {
     "word": "Naleśniki",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Patelnia"
+    "hint": "Weekend"
   },
   {
     "word": "Gołąbki",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Kapusta"
+    "hint": "Niedziela"
   },
   {
-    "word": "Kotlet schabowy",
+    "word": "Schabowy",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Obiad"
+    "hint": "Klasyka"
   },
   {
     "word": "Bigos",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Kociołek"
+    "hint": "Cierpliwość"
   },
   {
     "word": "Rosół",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Bulion"
+    "hint": "Niedziela"
   },
   {
     "word": "Żurek",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Zakwas"
+    "hint": "Święta"
   },
   {
-    "word": "Barszcz czerwony",
+    "word": "Barszcz",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Buraki"
+    "hint": "Czerwień"
   },
   {
-    "word": "Zupa pomidorowa",
+    "word": "Pomidorowa",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Przecier"
+    "hint": "Dzieciństwo"
   },
   {
     "word": "Chłodnik",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Zimno"
+    "hint": "Lato"
   },
   {
     "word": "Gulasz",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Sos"
+    "hint": "Sycenie"
   },
   {
     "word": "Lasagne",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Płaty"
+    "hint": "Warstwy"
   },
   {
     "word": "Spaghetti",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Makaron"
+    "hint": "Długość"
   },
   {
     "word": "Tortilla",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Zawijanie"
+    "hint": "Wygoda"
   },
   {
     "word": "Tacos",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Chrupkość"
+    "hint": "Impreza"
   },
   {
     "word": "Burrito",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Farsz"
+    "hint": "Meksyk"
   },
   {
     "word": "Sushi",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Ryż"
+    "hint": "Precyzja"
   },
   {
     "word": "Ramen",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Miska"
-  },
-  {
-    "word": "Pad Thai",
-    "category": "Jedzenie i Kulinaria",
-    "hint": "Orzeszki"
-  },
-  {
-    "word": "Sajgonki",
-    "category": "Jedzenie i Kulinaria",
-    "hint": "Papier"
+    "hint": "Bulion"
   },
   {
     "word": "Curry",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Kurkuma"
+    "hint": "Aromat"
   },
   {
     "word": "Hummus",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Ciecierzyca"
+    "hint": "Zdrowie"
   },
   {
     "word": "Falafel",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Kulki"
-  },
-  {
-    "word": "Sałatka jarzynowa",
-    "category": "Jedzenie i Kulinaria",
-    "hint": "Majonez"
+    "hint": "Ulica"
   },
   {
     "word": "Zapiekanka",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Grzanka"
+    "hint": "Wspomnienie"
   },
   {
     "word": "Chleb",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Zakwas"
+    "hint": "Podstawa"
   },
   {
     "word": "Bułka",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Śniadanie"
+    "hint": "Poranek"
   },
   {
     "word": "Rogal",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Kształt"
+    "hint": "Paryż"
   },
   {
     "word": "Bagietka",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Piekarnia"
+    "hint": "Francja"
   },
   {
     "word": "Tost",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Złocistość"
+    "hint": "Krótko"
   },
   {
     "word": "Masło",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Tłuszcz"
+    "hint": "Gładkość"
   },
   {
-    "word": "Ser żółty",
+    "word": "Ser",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Dziury"
+    "hint": "Dojrzewanie"
   },
   {
     "word": "Twaróg",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Biel"
+    "hint": "Nabiał"
   },
   {
     "word": "Jajecznica",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Patelnia"
+    "hint": "Śniadanie"
   },
   {
     "word": "Omlet",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Puszystość"
+    "hint": "Lekkość"
   },
   {
     "word": "Parówki",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Śniadanie"
+    "hint": "Szybkość"
   },
   {
     "word": "Szynka",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Plastry"
+    "hint": "Kanapka"
   },
   {
     "word": "Boczek",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Smażenie"
+    "hint": "Zapach"
   },
   {
     "word": "Kiełbasa",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Wędzarnia"
+    "hint": "Ognisko"
   },
   {
     "word": "Pasztet",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Smarowidło"
+    "hint": "Smarowanie"
   },
   {
     "word": "Śledź",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Zalewa"
+    "hint": "Zakąska"
   },
   {
     "word": "Łosoś",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Ryba"
+    "hint": "Szlachetność"
   },
   {
     "word": "Tuńczyk",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Puszka"
+    "hint": "Głębia"
   },
   {
     "word": "Karp",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Święta"
-  },
-  {
-    "word": "Krewetki",
-    "category": "Jedzenie i Kulinaria",
-    "hint": "Owoce"
+    "hint": "Grudzień"
   },
   {
     "word": "Czekolada",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Słodycz"
+    "hint": "Przyjemność"
   },
   {
     "word": "Lody",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Chłód"
+    "hint": "Upał"
   },
   {
     "word": "Szarlotka",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Cynamon"
+    "hint": "Jesień"
   },
   {
     "word": "Sernik",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Wypiek"
+    "hint": "Uroczystość"
   },
   {
     "word": "Makowiec",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Mak"
+    "hint": "Zwinięcie"
   },
   {
     "word": "Pączek",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Nadzienie"
+    "hint": "Karnawał"
   },
   {
     "word": "Faworki",
@@ -932,47 +897,47 @@
   {
     "word": "Gofr",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Krata"
+    "hint": "Wakacje"
   },
   {
     "word": "Tiramisu",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Kawa"
+    "hint": "Deser"
   },
   {
     "word": "Beza",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Piana"
+    "hint": "Słodycz"
   },
   {
     "word": "Muffin",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Foremka"
+    "hint": "Przekąska"
   },
   {
     "word": "Piernik",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Korzenny"
+    "hint": "Kory"
   },
   {
     "word": "Karmel",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Palenie"
+    "hint": "Lepkość"
   },
   {
     "word": "Lizak",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Patyk"
+    "hint": "Cierpliwość"
   },
   {
     "word": "Żelki",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Żelatyna"
+    "hint": "Radość"
   },
   {
     "word": "Chałwa",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Sezam"
+    "hint": "Wschód"
   },
   {
     "word": "Kisiel",
@@ -982,47 +947,47 @@
   {
     "word": "Budyń",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Mleko"
+    "hint": "Ciepło"
   },
   {
     "word": "Galaretka",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Krzepnięcie"
+    "hint": "Ruch"
   },
   {
     "word": "Truskawka",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Sezon"
+    "hint": "Czerwiec"
   },
   {
     "word": "Malina",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Krzak"
+    "hint": "Słodycz"
   },
   {
     "word": "Borówka",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Fiolet"
+    "hint": "Świeżość"
   },
   {
     "word": "Jabłko",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Sad"
+    "hint": "Zdrowie"
   },
   {
     "word": "Gruszka",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Ogród"
+    "hint": "Kształt"
   },
   {
     "word": "Banan",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Skórka"
+    "hint": "Tropiki"
   },
   {
     "word": "Pomarańcza",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Cytrus"
+    "hint": "Zima"
   },
   {
     "word": "Cytryna",
@@ -1032,167 +997,162 @@
   {
     "word": "Mandarynka",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Cząstki"
+    "hint": "Zapach"
   },
   {
     "word": "Arbuz",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Pestki"
+    "hint": "Orzeźwienie"
   },
   {
     "word": "Melon",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Miąższ"
+    "hint": "Soczystość"
   },
   {
     "word": "Winogrono",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Kiść"
+    "hint": "Uczta"
   },
   {
     "word": "Ananas",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Tropiki"
+    "hint": "Korona"
   },
   {
     "word": "Mango",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Pestka"
+    "hint": "Egzotyka"
   },
   {
     "word": "Brzoskwinia",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Meszek"
+    "hint": "Aksamit"
   },
   {
     "word": "Morela",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Owoce"
+    "hint": "Pomarańcz"
   },
   {
     "word": "Śliwka",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Powidła"
+    "hint": "Ogród"
   },
   {
     "word": "Czereśnia",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Ogonek"
+    "hint": "Para"
   },
   {
     "word": "Kiwi",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Włochate"
+    "hint": "Cierpkość"
   },
   {
     "word": "Granat",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Ziarna"
+    "hint": "Bogactwo"
   },
   {
     "word": "Awokado",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Zielony"
+    "hint": "Gładkość"
   },
   {
     "word": "Pomidor",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Krzew"
+    "hint": "Ogród"
   },
   {
     "word": "Ogórek",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Grunt"
+    "hint": "Orzeźwienie"
   },
   {
     "word": "Marchewka",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Korzeń"
+    "hint": "Chrupkość"
   },
   {
     "word": "Ziemniak",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Bulwa"
+    "hint": "Prostota"
   },
   {
     "word": "Cebula",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Warstwy"
+    "hint": "Emocje"
   },
   {
     "word": "Czosnek",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Ząbki"
+    "hint": "Ochrona"
   },
   {
     "word": "Papryka",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Strąk"
+    "hint": "Barwa"
   },
   {
     "word": "Kukurydza",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Kolba"
+    "hint": "Złoto"
   },
   {
     "word": "Dynia",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Jesień"
+    "hint": "Październik"
   },
   {
     "word": "Brokuł",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Różyczki"
+    "hint": "Zieleń"
   },
   {
     "word": "Kalafior",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Główka"
+    "hint": "Bukiet"
   },
   {
     "word": "Cukinia",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Warzywo"
+    "hint": "Łagodność"
   },
   {
     "word": "Bakłażan",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Fiolet"
+    "hint": "Śródziemnomorze"
   },
   {
     "word": "Szpinak",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Liście"
+    "hint": "Witalność"
   },
   {
     "word": "Kawa",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Kofeina"
+    "hint": "Poranek"
   },
   {
     "word": "Herbata",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Zaparzanie"
+    "hint": "Chwila"
   },
   {
-    "word": "Gorąca czekolada",
+    "word": "Kakao",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Kubek"
-  },
-  {
-    "word": "Sok pomarańczowy",
-    "category": "Jedzenie i Kulinaria",
-    "hint": "Szklanka"
+    "hint": "Ciepło"
   },
   {
     "word": "Lemoniada",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Cytrusy"
+    "hint": "Orzeźwienie"
   },
   {
     "word": "Kompot",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Owoce"
+    "hint": "Obiad"
   },
   {
     "word": "Mleko",
@@ -1200,34 +1160,24 @@
     "hint": "Biel"
   },
   {
-    "word": "Koktajl",
-    "category": "Jedzenie i Kulinaria",
-    "hint": "Blender"
-  },
-  {
-    "word": "Kakao",
-    "category": "Jedzenie i Kulinaria",
-    "hint": "Proszek"
-  },
-  {
     "word": "Musztarda",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Gorczyca"
+    "hint": "Ostrość"
   },
   {
     "word": "Ketchup",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Sos"
+    "hint": "Dodatek"
   },
   {
     "word": "Majonez",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Emulsja"
+    "hint": "Święta"
   },
   {
     "word": "Chrzan",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Ostrość"
+    "hint": "Moc"
   },
   {
     "word": "Ocet",
@@ -1235,14 +1185,14 @@
     "hint": "Kwas"
   },
   {
-    "word": "Oliwa z oliwek",
+    "word": "Oliwa",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Tłoczenie"
+    "hint": "Grecja"
   },
   {
     "word": "Miód",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Słodycz"
+    "hint": "Praca"
   },
   {
     "word": "Dżem",
@@ -1252,32 +1202,32 @@
   {
     "word": "Powidła",
     "category": "Jedzenie i Kulinaria",
-    "hint": "Smażenie"
+    "hint": "Tradycja"
   },
   {
     "word": "Plaża",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Wybrzeże"
+    "hint": "Beztroska"
   },
   {
     "word": "Pustynia",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Wydma"
+    "hint": "Samotność"
   },
   {
     "word": "Góry",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Wspinaczka"
+    "hint": "Wyzwanie"
   },
   {
     "word": "Jaskinia",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Skała"
+    "hint": "Ukrycie"
   },
   {
     "word": "Wyspa",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Ląd"
+    "hint": "Izolacja"
   },
   {
     "word": "Dżungla",
@@ -1287,372 +1237,337 @@
   {
     "word": "Las",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Drzewa"
+    "hint": "Cisza"
   },
   {
     "word": "Polana",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Trawa"
+    "hint": "Odpoczynek"
   },
   {
     "word": "Wulkan",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Krater"
+    "hint": "Żywioł"
   },
   {
     "word": "Wodospad",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Kaskada"
+    "hint": "Siła"
   },
   {
     "word": "Jezioro",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Akwen"
+    "hint": "Tafla"
   },
   {
     "word": "Rzeka",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Koryto"
+    "hint": "Prąd"
   },
   {
     "word": "Lodowiec",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Masa"
+    "hint": "Chłód"
   },
   {
     "word": "Kanion",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Rozpadlina"
+    "hint": "Przepaść"
   },
   {
     "word": "Oaza",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Pustynia"
+    "hint": "Ukojenie"
   },
   {
     "word": "Bagno",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Mokradła"
+    "hint": "Tajemnica"
   },
   {
     "word": "Szpital",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Dyżur"
+    "hint": "Nadzieja"
   },
   {
     "word": "Szkoła",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Lekcje"
+    "hint": "Dzwonek"
   },
   {
     "word": "Uniwersytet",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Katedra"
+    "hint": "Wiedza"
   },
   {
     "word": "Biblioteka",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Półki"
+    "hint": "Spokój"
   },
   {
     "word": "Muzeum",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Eksponaty"
+    "hint": "Czas"
   },
   {
     "word": "Teatr",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Scena"
+    "hint": "Iluzja"
   },
   {
     "word": "Kino",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Ekran"
+    "hint": "Emocje"
   },
   {
     "word": "Filharmonia",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Orkiestra"
+    "hint": "Dźwięk"
   },
   {
     "word": "Opera",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Aria"
+    "hint": "Głos"
   },
   {
     "word": "Cyrk",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Arena"
+    "hint": "Zabawa"
   },
   {
     "word": "Stadion",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Trybuna"
+    "hint": "Doping"
   },
   {
     "word": "Basen",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Kafelki"
+    "hint": "Trening"
   },
   {
     "word": "Siłownia",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Ciężary"
+    "hint": "Wysiłek"
   },
   {
     "word": "Lotnisko",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Pas"
+    "hint": "Podróż"
   },
   {
-    "word": "Dworzec kolejowy",
+    "word": "Dworzec",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Peron"
+    "hint": "Czekanie"
   },
   {
-    "word": "Port morski",
+    "word": "Port",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Doki"
-  },
-  {
-    "word": "Stacja benzynowa",
-    "category": "Miejsca, Budynki i Architektura",
-    "hint": "Dystrybutor"
+    "hint": "Horyzont"
   },
   {
     "word": "Hotel",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Recepcja"
+    "hint": "Gościnność"
   },
   {
     "word": "Restauracja",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Karta"
+    "hint": "Wieczór"
   },
   {
     "word": "Kawiarnia",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Aromat"
+    "hint": "Rozmowa"
   },
   {
     "word": "Piekarnia",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Chleb"
+    "hint": "Zapach"
   },
   {
     "word": "Apteka",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Leki"
+    "hint": "Pomoc"
   },
   {
     "word": "Bank",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Konta"
+    "hint": "Zaufanie"
   },
   {
     "word": "Poczta",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Listy"
+    "hint": "Wiadomość"
   },
   {
     "word": "Supermarket",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Wózek"
-  },
-  {
-    "word": "Centrum handlowe",
-    "category": "Miejsca, Budynki i Architektura",
-    "hint": "Pasaż"
+    "hint": "Wybór"
   },
   {
     "word": "Targowisko",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Stragan"
+    "hint": "Gwar"
   },
   {
     "word": "Kościół",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Nawa"
+    "hint": "Zaduma"
   },
   {
     "word": "Katedra",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Witraż"
+    "hint": "Majestat"
   },
   {
     "word": "Zamek",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Mury"
+    "hint": "Historia"
   },
   {
     "word": "Pałac",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Rezydencja"
+    "hint": "Bogactwo"
   },
   {
     "word": "Twierdza",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Bastion"
+    "hint": "Obrona"
   },
   {
     "word": "Bunkier",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Beton"
+    "hint": "Schronienie"
   },
   {
-    "word": "Latarnia morska",
+    "word": "Latarnia",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Światło"
+    "hint": "Drogowskaz"
   },
   {
     "word": "Wiatrak",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Skrzydła"
+    "hint": "Powiew"
   },
   {
-    "word": "Młyn wodny",
+    "word": "Młyn",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Koło"
+    "hint": "Praca"
   },
   {
-    "word": "Remiza strażacka",
+    "word": "Remiza",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Syrena"
+    "hint": "Gotowość"
   },
   {
-    "word": "Komisariat policji",
+    "word": "Komisariat",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Posterunek"
+    "hint": "Porządek"
   },
   {
     "word": "Sąd",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Rozprawa"
+    "hint": "Sprawiedliwość"
   },
   {
     "word": "Więzienie",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Krata"
+    "hint": "Kara"
   },
   {
     "word": "Ratusz",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Rynek"
+    "hint": "Decyzje"
   },
   {
     "word": "Wieżowiec",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Piętra"
+    "hint": "Nowoczesność"
   },
   {
     "word": "Most",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Przeprawa"
+    "hint": "Połączenie"
   },
   {
     "word": "Tunel",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Przejazd"
+    "hint": "Ciemność"
   },
   {
     "word": "Tama",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Zapora"
+    "hint": "Opór"
   },
   {
     "word": "Hangar",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Wrota"
+    "hint": "Przestrzeń"
   },
   {
     "word": "Szklarnia",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Szkło"
+    "hint": "Klimat"
   },
   {
     "word": "Obserwatorium",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Kopuła"
+    "hint": "Kosmos"
   },
   {
     "word": "Planetarium",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Niebo"
-  },
-  {
-    "word": "ZOO",
-    "category": "Miejsca, Budynki i Architektura",
-    "hint": "Wybiegi"
-  },
-  {
-    "word": "Park rozrywki",
-    "category": "Miejsca, Budynki i Architektura",
-    "hint": "Karuzela"
-  },
-  {
-    "word": "Plac zabaw",
-    "category": "Miejsca, Budynki i Architektura",
-    "hint": "Piasek"
+    "hint": "Gwiazdy"
   },
   {
     "word": "Cmentarz",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Alejka"
+    "hint": "Pamięć"
   },
   {
     "word": "Kopalnia",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Szyb"
+    "hint": "Trud"
   },
   {
     "word": "Huta",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Piec"
+    "hint": "Żar"
   },
   {
     "word": "Fabryka",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Taśma"
-  },
-  {
-    "word": "Stacja kosmiczna",
-    "category": "Miejsca, Budynki i Architektura",
-    "hint": "Orbita"
+    "hint": "Produkcja"
   },
   {
     "word": "Igloo",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Lód"
+    "hint": "Śnieg"
   },
   {
     "word": "Wigwam",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Skóry"
+    "hint": "Tradycja"
   },
   {
     "word": "Jurta",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Filc"
+    "hint": "Step"
   },
   {
-    "word": "Schronisko górskie",
+    "word": "Schronisko",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Szlak"
+    "hint": "Ciepło"
   },
   {
     "word": "Pralnia",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Bęben"
-  },
-  {
-    "word": "Salon fryzjerski",
-    "category": "Miejsca, Budynki i Architektura",
-    "hint": "Fotel"
+    "hint": "Czystość"
   },
   {
     "word": "Garaż",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Brama"
+    "hint": "Schowek"
   },
   {
     "word": "Piwnica",
@@ -1662,127 +1577,117 @@
   {
     "word": "Strych",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Krokwie"
+    "hint": "Pamiątki"
   },
   {
     "word": "Balkon",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Barierka"
+    "hint": "Widok"
   },
   {
     "word": "Taras",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Ogród"
+    "hint": "Wypoczynek"
   },
   {
     "word": "Altana",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Działka"
+    "hint": "Cień"
   },
   {
     "word": "Stajnia",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Boks"
+    "hint": "Zapach"
   },
   {
     "word": "Obora",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Słoma"
+    "hint": "Wieś"
   },
   {
     "word": "Kurnik",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Grzęda"
+    "hint": "Zgiełk"
   },
   {
     "word": "Pasieka",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Ule"
+    "hint": "Słodycz"
   },
   {
     "word": "Winnica",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Krzewy"
+    "hint": "Słońce"
   },
   {
     "word": "Molo",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Deski"
-  },
-  {
-    "word": "Port jachtowy",
-    "category": "Miejsca, Budynki i Architektura",
-    "hint": "Keja"
-  },
-  {
-    "word": "Amfiteatr",
-    "category": "Miejsca, Budynki i Architektura",
-    "hint": "Półkole"
+    "hint": "Spacer"
   },
   {
     "word": "Fontanna",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Wodotrysk"
+    "hint": "Orzeźwienie"
   },
   {
     "word": "Pomnik",
     "category": "Miejsca, Budynki i Architektura",
-    "hint": "Cokół"
+    "hint": "Wspomnienie"
   },
   {
     "word": "Zegarek",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Czas"
+    "hint": "Punktualność"
   },
   {
     "word": "Portfel",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Kieszeń"
+    "hint": "Wartość"
   },
   {
     "word": "Parasol",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Deszcz"
+    "hint": "Ochrona"
   },
   {
     "word": "Okulary",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Oprawki"
+    "hint": "Ostrość"
   },
   {
     "word": "Plecak",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Szelki"
+    "hint": "Droga"
   },
   {
     "word": "Klucz",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Zamek"
+    "hint": "Dostęp"
   },
   {
     "word": "Kłódka",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Pałąk"
+    "hint": "Sekret"
   },
   {
     "word": "Nożyczki",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Ostrza"
+    "hint": "Podział"
   },
   {
     "word": "Latarka",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Bateria"
+    "hint": "Światło"
   },
   {
     "word": "Świeczka",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Wosk"
+    "hint": "Nastrój"
   },
   {
     "word": "Zapałki",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Siarka"
+    "hint": "Iskra"
   },
   {
     "word": "Zapalniczka",
@@ -1792,422 +1697,387 @@
   {
     "word": "Lustro",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Odbicie"
+    "hint": "Prawda"
   },
   {
-    "word": "Szczoteczka do zębów",
+    "word": "Szczoteczka",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Włosie"
-  },
-  {
-    "word": "Pasta do zębów",
-    "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Mięta"
+    "hint": "Czystość"
   },
   {
     "word": "Mydło",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Kostka"
+    "hint": "Piana"
   },
   {
     "word": "Szampon",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Piana"
+    "hint": "Zapach"
   },
   {
     "word": "Ręcznik",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Materiał"
+    "hint": "Suchość"
   },
   {
     "word": "Grzebień",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Ząbki"
+    "hint": "Porządek"
   },
   {
-    "word": "Suszarka do włosów",
+    "word": "Suszarka",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Ciepło"
+    "hint": "Pośpiech"
   },
   {
-    "word": "Maszynka do golenia",
+    "word": "Maszynka",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Żyletka"
+    "hint": "Rano"
   },
   {
     "word": "Żelazko",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Stopa"
-  },
-  {
-    "word": "Deska do prasowania",
-    "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Pokrowiec"
+    "hint": "Gładkość"
   },
   {
     "word": "Odkurzacz",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Worek"
+    "hint": "Dźwięk"
   },
   {
     "word": "Mop",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Wiadro"
+    "hint": "Błysk"
   },
   {
     "word": "Miotła",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Zamiatanie"
+    "hint": "Porządek"
   },
   {
-    "word": "Kosz na śmieci",
+    "word": "Kosz",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Odpadki"
+    "hint": "Pozbycie"
   },
   {
     "word": "Młotek",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Obuch"
+    "hint": "Uderzenie"
   },
   {
     "word": "Śrubokręt",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Uchwyt"
-  },
-  {
-    "word": "Klucz francuski",
-    "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Hydraulika"
+    "hint": "Montaż"
   },
   {
     "word": "Kombinerki",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Szczypce"
+    "hint": "Uścisk"
   },
   {
-    "word": "Piła ręczna",
-    "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Zęby"
-  },
-  {
-    "word": "Wiertarka",
-    "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Obroty"
-  },
-  {
-    "word": "Miarka",
-    "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Centymetry"
-  },
-  {
-    "word": "Poziomica",
-    "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Pęcherzyk"
-  },
-  {
-    "word": "Taśma klejąca",
-    "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Rolka"
-  },
-  {
-    "word": "Klej",
-    "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Spoina"
-  },
-  {
-    "word": "Gwoździe",
-    "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Trzpień"
-  },
-  {
-    "word": "Śruba",
-    "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Gwint"
-  },
-  {
-    "word": "Drabina",
-    "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Szczeble"
-  },
-  {
-    "word": "Taczka",
-    "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Koło"
-  },
-  {
-    "word": "Łopata",
-    "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Sztych"
-  },
-  {
-    "word": "Grabie",
-    "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Zęby"
-  },
-  {
-    "word": "Konewka",
-    "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Sitko"
-  },
-  {
-    "word": "Sekator",
+    "word": "Piła",
     "category": "Przedmioty Codzienne i Narzędzia",
     "hint": "Cięcie"
   },
   {
-    "word": "Kosiarka",
+    "word": "Wiertarka",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Trawnik"
+    "hint": "Hałas"
   },
   {
-    "word": "Wąż ogrodowy",
+    "word": "Miarka",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Podlewanie"
+    "hint": "Precyzja"
+  },
+  {
+    "word": "Poziomica",
+    "category": "Przedmioty Codzienne i Narzędzia",
+    "hint": "Równość"
+  },
+  {
+    "word": "Klej",
+    "category": "Przedmioty Codzienne i Narzędzia",
+    "hint": "Połączenie"
+  },
+  {
+    "word": "Gwoździe",
+    "category": "Przedmioty Codzienne i Narzędzia",
+    "hint": "Mocowanie"
+  },
+  {
+    "word": "Śruba",
+    "category": "Przedmioty Codzienne i Narzędzia",
+    "hint": "Trwałość"
+  },
+  {
+    "word": "Drabina",
+    "category": "Przedmioty Codzienne i Narzędzia",
+    "hint": "Awans"
+  },
+  {
+    "word": "Taczka",
+    "category": "Przedmioty Codzienne i Narzędzia",
+    "hint": "Praca"
+  },
+  {
+    "word": "Łopata",
+    "category": "Przedmioty Codzienne i Narzędzia",
+    "hint": "Wysiłek"
+  },
+  {
+    "word": "Grabie",
+    "category": "Przedmioty Codzienne i Narzędzia",
+    "hint": "Jesień"
+  },
+  {
+    "word": "Konewka",
+    "category": "Przedmioty Codzienne i Narzędzia",
+    "hint": "Troska"
+  },
+  {
+    "word": "Sekator",
+    "category": "Przedmioty Codzienne i Narzędzia",
+    "hint": "Ogród"
+  },
+  {
+    "word": "Kosiarka",
+    "category": "Przedmioty Codzienne i Narzędzia",
+    "hint": "Sobota"
   },
   {
     "word": "Garnek",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Pokrywka"
+    "hint": "Ciepło"
   },
   {
     "word": "Patelnia",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Uchwyt"
+    "hint": "Smażenie"
   },
   {
     "word": "Czajnik",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Wrzątek"
+    "hint": "Gwizd"
   },
   {
-    "word": "Nóż kuchenny",
+    "word": "Nóż",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Klinga"
+    "hint": "Ostrość"
   },
   {
     "word": "Widelec",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Zęby"
+    "hint": "Kultura"
   },
   {
     "word": "Łyżka",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Czerpak"
+    "hint": "Ciepło"
   },
   {
     "word": "Talerz",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Ceramika"
+    "hint": "Dzielenie"
   },
   {
     "word": "Miska",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Naczynie"
+    "hint": "Pojemność"
   },
   {
     "word": "Kubek",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Ucho"
+    "hint": "Napar"
   },
   {
     "word": "Szklanka",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Przezroczystość"
+    "hint": "Przejrzystość"
   },
   {
     "word": "Kieliszek",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Nóżka"
+    "hint": "Toast"
   },
   {
     "word": "Korkociąg",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Spirala"
-  },
-  {
-    "word": "Otwieracz do puszek",
-    "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Metal"
+    "hint": "Świętowanie"
   },
   {
     "word": "Tarka",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Oczka"
+    "hint": "Drobiazg"
   },
   {
     "word": "Durszlak",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Otwory"
+    "hint": "Odpływ"
   },
   {
-    "word": "Wałek do ciasta",
+    "word": "Wałek",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Drewno"
-  },
-  {
-    "word": "Deska do krojenia",
-    "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Podkładka"
+    "hint": "Cierpliwość"
   },
   {
     "word": "Termos",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Izolacja"
+    "hint": "Wędrówka"
   },
   {
     "word": "Bidon",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Ustnik"
+    "hint": "Sport"
   },
   {
     "word": "Poduszka",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Poszewka"
+    "hint": "Odpoczynek"
   },
   {
     "word": "Kołdra",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Wypełnienie"
+    "hint": "Bezpieczeństwo"
   },
   {
     "word": "Koc",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Przykrycie"
+    "hint": "Przytulność"
   },
   {
     "word": "Prześcieradło",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Tkanina"
+    "hint": "Świeżość"
   },
   {
     "word": "Wieszak",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Drążek"
+    "hint": "Szafa"
   },
   {
     "word": "Długopis",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Wkład"
+    "hint": "Podpis"
   },
   {
     "word": "Ołówek",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Grafit"
+    "hint": "Szkic"
   },
   {
-    "word": "Gumka do ścierania",
+    "word": "Gumka",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Kauczuk"
+    "hint": "Poprawka"
   },
   {
     "word": "Temperówka",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Ostrzałka"
+    "hint": "Ostrość"
   },
   {
     "word": "Linijka",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Podziałka"
+    "hint": "Porządek"
   },
   {
     "word": "Zeszyt",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Kartki"
+    "hint": "Zapiski"
   },
   {
     "word": "Notatnik",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Notes"
+    "hint": "Pamięć"
   },
   {
     "word": "Koperta",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Znaczek"
+    "hint": "Dyskrecja"
   },
   {
-    "word": "Znaczek pocztowy",
+    "word": "Znaczek",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Ząbki"
+    "hint": "Wartość"
   },
   {
     "word": "Spinacz",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Drut"
+    "hint": "Związek"
   },
   {
     "word": "Zszywacz",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Biurowy"
+    "hint": "Trwałość"
   },
   {
     "word": "Dziurkacz",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Otwory"
+    "hint": "Biurowość"
   },
   {
     "word": "Segregator",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Dźwignia"
+    "hint": "Archiwum"
   },
   {
     "word": "Globus",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Kula"
+    "hint": "Świat"
   },
   {
     "word": "Mapa",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Skala"
+    "hint": "Droga"
   },
   {
     "word": "Lupa",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Powiększenie"
+    "hint": "Szczegół"
   },
   {
     "word": "Pędzel",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Włosie"
+    "hint": "Wyobraźnia"
   },
   {
-    "word": "Paleta malarska",
+    "word": "Paleta",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Farby"
+    "hint": "Mieszanie"
   },
   {
     "word": "Sztaluga",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Stojak"
+    "hint": "Sztuka"
   },
   {
     "word": "Termometr",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Słupek"
+    "hint": "Stan"
   },
   {
-    "word": "Kłębka wełny",
+    "word": "Włóczka",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Włóczka"
+    "hint": "Cierpliwość"
   },
   {
-    "word": "Igła z nitką",
+    "word": "Igła",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Szycie"
+    "hint": "Precyzja"
   },
   {
     "word": "Naparstek",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Ochrona"
+    "hint": "Bezpieczeństwo"
   },
   {
     "word": "Szpilka",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Główka"
+    "hint": "Chwila"
   },
   {
-    "word": "Waga kuchenna",
+    "word": "Waga",
     "category": "Przedmioty Codzienne i Narzędzia",
-    "hint": "Gramy"
+    "hint": "Miarodajność"
   },
   {
     "word": "Minutnik",
@@ -2217,322 +2087,322 @@
   {
     "word": "Detektyw",
     "category": "Zawody, Role i Postacie",
-    "hint": "Tajemnica"
+    "hint": "Zagadka"
   },
   {
     "word": "Policjant",
     "category": "Zawody, Role i Postacie",
-    "hint": "Mundur"
+    "hint": "Zasady"
   },
   {
     "word": "Strażak",
     "category": "Zawody, Role i Postacie",
-    "hint": "Wąż"
+    "hint": "Odwaga"
   },
   {
     "word": "Lekarz",
     "category": "Zawody, Role i Postacie",
-    "hint": "Fartuch"
+    "hint": "Zdrowie"
   },
   {
     "word": "Pielęgniarka",
     "category": "Zawody, Role i Postacie",
-    "hint": "Zabieg"
+    "hint": "Opieka"
   },
   {
-    "word": "Ratownik medyczny",
+    "word": "Ratownik",
     "category": "Zawody, Role i Postacie",
-    "hint": "Karetka"
+    "hint": "Pomoc"
   },
   {
     "word": "Chirurg",
     "category": "Zawody, Role i Postacie",
-    "hint": "Skalpel"
+    "hint": "Skupienie"
   },
   {
     "word": "Dentysta",
     "category": "Zawody, Role i Postacie",
-    "hint": "Fotel"
+    "hint": "Ulga"
   },
   {
     "word": "Weterynarz",
     "category": "Zawody, Role i Postacie",
-    "hint": "Lecznica"
+    "hint": "Wdzięczność"
   },
   {
     "word": "Nauczyciel",
     "category": "Zawody, Role i Postacie",
-    "hint": "Klasa"
+    "hint": "Wiedza"
   },
   {
     "word": "Profesor",
     "category": "Zawody, Role i Postacie",
-    "hint": "Uczelnia"
+    "hint": "Doświadczenie"
   },
   {
     "word": "Naukowiec",
     "category": "Zawody, Role i Postacie",
-    "hint": "Badania"
+    "hint": "Odkrycie"
   },
   {
     "word": "Astronauta",
     "category": "Zawody, Role i Postacie",
-    "hint": "Kombinezon"
+    "hint": "Nieważkość"
   },
   {
     "word": "Pilot",
     "category": "Zawody, Role i Postacie",
-    "hint": "Kokpit"
+    "hint": "Odpowiedzialność"
   },
   {
     "word": "Stewardesa",
     "category": "Zawody, Role i Postacie",
-    "hint": "Pokład"
+    "hint": "Uśmiech"
   },
   {
-    "word": "Kapitan statku",
+    "word": "Kapitan",
     "category": "Zawody, Role i Postacie",
-    "hint": "Mostek"
+    "hint": "Dowodzenie"
   },
   {
     "word": "Marynarz",
     "category": "Zawody, Role i Postacie",
-    "hint": "Lina"
+    "hint": "Tęsknota"
   },
   {
-    "word": "Kierowca autobusu",
+    "word": "Kierowca",
     "category": "Zawody, Role i Postacie",
-    "hint": "Kurs"
+    "hint": "Trasa"
   },
   {
     "word": "Maszynista",
     "category": "Zawody, Role i Postacie",
-    "hint": "Szyny"
+    "hint": "Punktualność"
   },
   {
     "word": "Taksówkarz",
     "category": "Zawody, Role i Postacie",
-    "hint": "Licznik"
+    "hint": "Opowieści"
   },
   {
     "word": "Kurier",
     "category": "Zawody, Role i Postacie",
-    "hint": "Paczka"
+    "hint": "Oczekiwanie"
   },
   {
     "word": "Listonosz",
     "category": "Zawody, Role i Postacie",
-    "hint": "Torba"
+    "hint": "Wiadomości"
   },
   {
     "word": "Kucharz",
     "category": "Zawody, Role i Postacie",
-    "hint": "Fartuch"
+    "hint": "Smak"
   },
   {
     "word": "Kelner",
     "category": "Zawody, Role i Postacie",
-    "hint": "Taca"
+    "hint": "Uprzejmość"
   },
   {
     "word": "Barman",
     "category": "Zawody, Role i Postacie",
-    "hint": "Lada"
+    "hint": "Słuchanie"
   },
   {
     "word": "Piekarz",
     "category": "Zawody, Role i Postacie",
-    "hint": "Mąka"
+    "hint": "Świt"
   },
   {
     "word": "Cukiernik",
     "category": "Zawody, Role i Postacie",
-    "hint": "Wypieki"
+    "hint": "Słodycz"
   },
   {
     "word": "Rzeźnik",
     "category": "Zawody, Role i Postacie",
-    "hint": "Tasak"
+    "hint": "Siła"
   },
   {
     "word": "Rolnik",
     "category": "Zawody, Role i Postacie",
-    "hint": "Pole"
+    "hint": "Natura"
   },
   {
     "word": "Ogrodnik",
     "category": "Zawody, Role i Postacie",
-    "hint": "Grządka"
+    "hint": "Cierpliwość"
   },
   {
     "word": "Leśnik",
     "category": "Zawody, Role i Postacie",
-    "hint": "Bór"
+    "hint": "Cisza"
   },
   {
     "word": "Rybak",
     "category": "Zawody, Role i Postacie",
-    "hint": "Kuter"
+    "hint": "Świt"
   },
   {
     "word": "Górnik",
     "category": "Zawody, Role i Postacie",
-    "hint": "Kask"
+    "hint": "Ziemia"
   },
   {
     "word": "Budowlaniec",
     "category": "Zawody, Role i Postacie",
-    "hint": "Budowa"
+    "hint": "Rozwój"
   },
   {
     "word": "Architekt",
     "category": "Zawody, Role i Postacie",
-    "hint": "Projekt"
+    "hint": "Wizja"
   },
   {
     "word": "Hydraulik",
     "category": "Zawody, Role i Postacie",
-    "hint": "Rura"
+    "hint": "Czystość"
   },
   {
     "word": "Elektryk",
     "category": "Zawody, Role i Postacie",
-    "hint": "Napięcie"
+    "hint": "Przepływ"
   },
   {
     "word": "Stolarz",
     "category": "Zawody, Role i Postacie",
-    "hint": "Wióry"
+    "hint": "Natura"
   },
   {
     "word": "Kowal",
     "category": "Zawody, Role i Postacie",
-    "hint": "Kowadło"
+    "hint": "Tradycja"
   },
   {
     "word": "Ślusarz",
     "category": "Zawody, Role i Postacie",
-    "hint": "Zamek"
+    "hint": "Bezpieczeństwo"
   },
   {
     "word": "Mechanik",
     "category": "Zawody, Role i Postacie",
-    "hint": "Warsztat"
+    "hint": "Sprawność"
   },
   {
-    "word": "Malarz pokojowy",
+    "word": "Malarz",
     "category": "Zawody, Role i Postacie",
-    "hint": "Wałek"
+    "hint": "Świeżość"
   },
   {
     "word": "Szklarz",
     "category": "Zawody, Role i Postacie",
-    "hint": "Szyba"
+    "hint": "Kruchość"
   },
   {
     "word": "Krawiec",
     "category": "Zawody, Role i Postacie",
-    "hint": "Nożyce"
+    "hint": "Dopasowanie"
   },
   {
     "word": "Szewc",
     "category": "Zawody, Role i Postacie",
-    "hint": "Kopyto"
+    "hint": "Trwałość"
   },
   {
     "word": "Zegarmistrz",
     "category": "Zawody, Role i Postacie",
-    "hint": "Mechanizm"
+    "hint": "Cierpliwość"
   },
   {
     "word": "Jubiler",
     "category": "Zawody, Role i Postacie",
-    "hint": "Kamienie"
+    "hint": "Prestiż"
   },
   {
     "word": "Pisarz",
     "category": "Zawody, Role i Postacie",
-    "hint": "Pióro"
+    "hint": "Wyobraźnia"
   },
   {
     "word": "Poeta",
     "category": "Zawody, Role i Postacie",
-    "hint": "Wiersz"
+    "hint": "Emocje"
   },
   {
     "word": "Dziennikarz",
     "category": "Zawody, Role i Postacie",
-    "hint": "Artykuł"
+    "hint": "Prawda"
   },
   {
     "word": "Fotograf",
     "category": "Zawody, Role i Postacie",
-    "hint": "Kadr"
+    "hint": "Chwila"
   },
   {
     "word": "Kamerzysta",
     "category": "Zawody, Role i Postacie",
-    "hint": "Obiektyw"
+    "hint": "Ruch"
   },
   {
     "word": "Reżyser",
     "category": "Zawody, Role i Postacie",
-    "hint": "Plan"
+    "hint": "Wizja"
   },
   {
     "word": "Aktor",
     "category": "Zawody, Role i Postacie",
-    "hint": "Rola"
+    "hint": "Wcielenie"
   },
   {
     "word": "Muzyk",
     "category": "Zawody, Role i Postacie",
-    "hint": "Instrument"
+    "hint": "Harmonia"
   },
   {
     "word": "Piosenkarz",
     "category": "Zawody, Role i Postacie",
-    "hint": "Głos"
+    "hint": "Oklaski"
   },
   {
     "word": "Dyrygent",
     "category": "Zawody, Role i Postacie",
-    "hint": "Orkiestra"
+    "hint": "Całość"
   },
   {
     "word": "Tancerz",
     "category": "Zawody, Role i Postacie",
-    "hint": "Ruch"
+    "hint": "Lekkość"
   },
   {
     "word": "Rzeźbiarz",
     "category": "Zawody, Role i Postacie",
-    "hint": "Dłuto"
+    "hint": "Bryła"
   },
   {
     "word": "Prezydent",
     "category": "Zawody, Role i Postacie",
-    "hint": "Urząd"
+    "hint": "Reprezentacja"
   },
   {
     "word": "Sędzia",
     "category": "Zawody, Role i Postacie",
-    "hint": "Toga"
+    "hint": "Bezstronność"
   },
   {
     "word": "Adwokat",
     "category": "Zawody, Role i Postacie",
-    "hint": "Obrona"
+    "hint": "Słowa"
   },
   {
     "word": "Żołnierz",
     "category": "Zawody, Role i Postacie",
-    "hint": "Służba"
+    "hint": "Dyscyplina"
   },
   {
     "word": "Generał",
     "category": "Zawody, Role i Postacie",
-    "hint": "Sztab"
+    "hint": "Strategia"
   },
   {
     "word": "Szpieg",
@@ -2542,572 +2412,502 @@
   {
     "word": "Kominiarz",
     "category": "Zawody, Role i Postacie",
-    "hint": "Sadza"
+    "hint": "Szczęście"
   },
   {
     "word": "Bibliotekarz",
     "category": "Zawody, Role i Postacie",
-    "hint": "Regały"
+    "hint": "Porządek"
   },
   {
     "word": "Przewodnik",
     "category": "Zawody, Role i Postacie",
-    "hint": "Trasa"
+    "hint": "Kierunek"
   },
   {
     "word": "Tłumacz",
     "category": "Zawody, Role i Postacie",
-    "hint": "Język"
+    "hint": "Zrozumienie"
   },
   {
     "word": "Księgowy",
     "category": "Zawody, Role i Postacie",
-    "hint": "Rachunki"
+    "hint": "Dokładność"
   },
   {
     "word": "Bankier",
     "category": "Zawody, Role i Postacie",
-    "hint": "Finanse"
+    "hint": "Liczby"
   },
   {
     "word": "Programista",
     "category": "Zawody, Role i Postacie",
-    "hint": "Kod"
+    "hint": "Logika"
   },
   {
     "word": "Archeolog",
     "category": "Zawody, Role i Postacie",
-    "hint": "Wykopaliska"
+    "hint": "Przeszłość"
   },
   {
     "word": "Historyk",
     "category": "Zawody, Role i Postacie",
-    "hint": "Źródła"
+    "hint": "Pamięć"
   },
   {
     "word": "Astronom",
     "category": "Zawody, Role i Postacie",
-    "hint": "Teleskop"
+    "hint": "Nieskończoność"
   },
   {
     "word": "Klaun",
     "category": "Zawody, Role i Postacie",
-    "hint": "Peruka"
+    "hint": "Uśmiech"
   },
   {
     "word": "Iluzjonista",
     "category": "Zawody, Role i Postacie",
-    "hint": "Sztuczka"
+    "hint": "Zdziwienie"
   },
   {
     "word": "Trener",
     "category": "Zawody, Role i Postacie",
-    "hint": "Gwizdek"
-  },
-  {
-    "word": "Sędzia sportowy",
-    "category": "Zawody, Role i Postacie",
-    "hint": "Kartka"
+    "hint": "Motywacja"
   },
   {
     "word": "Ochroniarz",
     "category": "Zawody, Role i Postacie",
-    "hint": "Dozór"
-  },
-  {
-    "word": "Ratownik wodny",
-    "category": "Zawody, Role i Postacie",
-    "hint": "Plaża"
+    "hint": "Spokój"
   },
   {
     "word": "Nurek",
     "category": "Zawody, Role i Postacie",
-    "hint": "Aparat"
+    "hint": "Głębokość"
   },
   {
     "word": "Alpinista",
     "category": "Zawody, Role i Postacie",
-    "hint": "Czekan"
+    "hint": "Szczyt"
   },
   {
     "word": "Florysta",
     "category": "Zawody, Role i Postacie",
-    "hint": "Wiązanka"
+    "hint": "Piękno"
   },
   {
     "word": "Smartfon",
     "category": "Technologia i Gadżety",
-    "hint": "Aplikacje"
+    "hint": "Kontakt"
   },
   {
     "word": "Laptop",
     "category": "Technologia i Gadżety",
-    "hint": "Zawias"
+    "hint": "Mobilność"
   },
   {
     "word": "Tablet",
     "category": "Technologia i Gadżety",
-    "hint": "Dotyk"
+    "hint": "Wygoda"
   },
   {
     "word": "Telewizor",
     "category": "Technologia i Gadżety",
-    "hint": "Pilot"
+    "hint": "Obraz"
   },
   {
     "word": "Radio",
     "category": "Technologia i Gadżety",
-    "hint": "Fale"
+    "hint": "Tło"
   },
   {
     "word": "Słuchawki",
     "category": "Technologia i Gadżety",
-    "hint": "Dźwięk"
+    "hint": "Izolacja"
   },
   {
-    "word": "Głośnik Bluetooth",
+    "word": "Głośnik",
     "category": "Technologia i Gadżety",
-    "hint": "Dźwięk"
+    "hint": "Przestrzeń"
   },
   {
     "word": "Mikrofon",
     "category": "Technologia i Gadżety",
-    "hint": "Sygnał"
+    "hint": "Głos"
   },
   {
-    "word": "Kamera wideo",
+    "word": "Kamera",
     "category": "Technologia i Gadżety",
-    "hint": "Matryca"
+    "hint": "Obserwacja"
   },
   {
-    "word": "Aparat fotograficzny",
+    "word": "Aparat",
     "category": "Technologia i Gadżety",
-    "hint": "Migawka"
+    "hint": "Wspomnienie"
   },
   {
     "word": "Dron",
     "category": "Technologia i Gadżety",
-    "hint": "Śmigła"
+    "hint": "Spojrzenie"
   },
   {
     "word": "Robot",
     "category": "Technologia i Gadżety",
-    "hint": "Automat"
+    "hint": "Przyszłość"
   },
   {
     "word": "Satelita",
     "category": "Technologia i Gadżety",
-    "hint": "Próżnia"
+    "hint": "Orbita"
   },
   {
-    "word": "Konsola do gier",
+    "word": "Konsola",
     "category": "Technologia i Gadżety",
-    "hint": "Gry"
+    "hint": "Rozrywka"
   },
   {
-    "word": "Pad do gier",
+    "word": "Pad",
     "category": "Technologia i Gadżety",
-    "hint": "Przyciski"
+    "hint": "Kontrola"
   },
   {
     "word": "Klawiatura",
     "category": "Technologia i Gadżety",
-    "hint": "Klawisze"
+    "hint": "Myśli"
   },
   {
-    "word": "Mysz komputerowa",
+    "word": "Myszka",
     "category": "Technologia i Gadżety",
-    "hint": "Kursor"
+    "hint": "Wybór"
   },
   {
     "word": "Monitor",
     "category": "Technologia i Gadżety",
-    "hint": "Piksele"
+    "hint": "Okno"
   },
   {
     "word": "Drukarka",
     "category": "Technologia i Gadżety",
-    "hint": "Tusz"
+    "hint": "Papier"
   },
   {
     "word": "Skaner",
     "category": "Technologia i Gadżety",
-    "hint": "Optyka"
+    "hint": "Kopia"
   },
   {
-    "word": "Ruter Wi-Fi",
+    "word": "Ruter",
     "category": "Technologia i Gadżety",
-    "hint": "Sygnał"
+    "hint": "Łączność"
   },
   {
     "word": "Pendrive",
     "category": "Technologia i Gadżety",
-    "hint": "Złącze"
+    "hint": "Kieszeń"
   },
   {
-    "word": "Dysk twardy",
+    "word": "Dysk",
     "category": "Technologia i Gadżety",
-    "hint": "Nośnik"
-  },
-  {
-    "word": "Karta pamięci",
-    "category": "Technologia i Gadżety",
-    "hint": "Chip"
+    "hint": "Pamięć"
   },
   {
     "word": "Powerbank",
     "category": "Technologia i Gadżety",
-    "hint": "Ogniwo"
+    "hint": "Zapas"
   },
   {
     "word": "Ładowarka",
     "category": "Technologia i Gadżety",
-    "hint": "Przewód"
+    "hint": "Życie"
   },
   {
     "word": "Bateria",
     "category": "Technologia i Gadżety",
-    "hint": "Bieguny"
+    "hint": "Energia"
   },
   {
     "word": "Pralka",
     "category": "Technologia i Gadżety",
-    "hint": "Wirowanie"
+    "hint": "Świeżość"
   },
   {
     "word": "Zmywarka",
     "category": "Technologia i Gadżety",
-    "hint": "Tabletka"
+    "hint": "Ułatwienie"
   },
   {
     "word": "Lodówka",
     "category": "Technologia i Gadżety",
-    "hint": "Agregat"
+    "hint": "Trwałość"
   },
   {
-    "word": "Kuchenka mikrofalowa",
+    "word": "Mikrofalówka",
     "category": "Technologia i Gadżety",
-    "hint": "Mikrofale"
+    "hint": "Chwila"
   },
   {
     "word": "Piekarnik",
     "category": "Technologia i Gadżety",
-    "hint": "Grzałka"
+    "hint": "Ciepło"
   },
   {
     "word": "Toster",
     "category": "Technologia i Gadżety",
-    "hint": "Grzałka"
+    "hint": "Chrupkość"
   },
   {
     "word": "Opiekacz",
     "category": "Technologia i Gadżety",
-    "hint": "Tosty"
+    "hint": "Ser"
   },
   {
     "word": "Blender",
     "category": "Technologia i Gadżety",
-    "hint": "Ostrze"
+    "hint": "Zdrowie"
   },
   {
     "word": "Mikser",
     "category": "Technologia i Gadżety",
-    "hint": "Mieszadła"
+    "hint": "Puszystość"
   },
   {
-    "word": "Ekspres do kawy",
+    "word": "Ekspres",
     "category": "Technologia i Gadżety",
-    "hint": "Ciśnienie"
+    "hint": "Rytuał"
   },
   {
     "word": "Klimatyzator",
     "category": "Technologia i Gadżety",
-    "hint": "Nawiew"
+    "hint": "Ulga"
   },
   {
     "word": "Wentylator",
     "category": "Technologia i Gadżety",
-    "hint": "Łopatki"
+    "hint": "Ruch"
   },
   {
     "word": "Smartwatch",
     "category": "Technologia i Gadżety",
-    "hint": "Tarcza"
-  },
-  {
-    "word": "Opaska fitness",
-    "category": "Technologia i Gadżety",
     "hint": "Kroki"
-  },
-  {
-    "word": "Czytnik e-booków",
-    "category": "Technologia i Gadżety",
-    "hint": "Matryca"
-  },
-  {
-    "word": "Gogle VR",
-    "category": "Technologia i Gadżety",
-    "hint": "Soczewki"
   },
   {
     "word": "Projektor",
     "category": "Technologia i Gadżety",
-    "hint": "Lampa"
+    "hint": "Klimat"
   },
   {
     "word": "Gramofon",
     "category": "Technologia i Gadżety",
-    "hint": "Ramię"
+    "hint": "Nostalgia"
   },
   {
     "word": "Kalkulator",
     "category": "Technologia i Gadżety",
-    "hint": "Cyfry"
-  },
-  {
-    "word": "Drukarka 3D",
-    "category": "Technologia i Gadżety",
-    "hint": "Filament"
+    "hint": "Pewność"
   },
   {
     "word": "Światłowód",
     "category": "Technologia i Gadżety",
-    "hint": "Rdzeń"
-  },
-  {
-    "word": "Lampa błyskowa",
-    "category": "Technologia i Gadżety",
-    "hint": "Błysk"
-  },
-  {
-    "word": "Walkie-talkie",
-    "category": "Technologia i Gadżety",
-    "hint": "Kanał"
+    "hint": "Prędkość"
   },
   {
     "word": "Rower",
     "category": "Pojazdy i Maszyny",
-    "hint": "Pedały"
+    "hint": "Zdrowie"
   },
   {
     "word": "Hulajnoga",
     "category": "Pojazdy i Maszyny",
-    "hint": "Podest"
-  },
-  {
-    "word": "Hulajnoga elektryczna",
-    "category": "Pojazdy i Maszyny",
-    "hint": "Akumulator"
+    "hint": "Lekkość"
   },
   {
     "word": "Deskorolka",
     "category": "Pojazdy i Maszyny",
-    "hint": "Kółka"
+    "hint": "Młodość"
   },
   {
     "word": "Rolki",
     "category": "Pojazdy i Maszyny",
-    "hint": "Szyna"
+    "hint": "Płynność"
   },
   {
     "word": "Motocykl",
     "category": "Pojazdy i Maszyny",
-    "hint": "Silnik"
+    "hint": "Wolność"
   },
   {
     "word": "Skuter",
     "category": "Pojazdy i Maszyny",
-    "hint": "Jednoślad"
+    "hint": "Miasto"
   },
   {
     "word": "Quad",
     "category": "Pojazdy i Maszyny",
-    "hint": "Teren"
+    "hint": "Bezdroża"
   },
   {
-    "word": "Samochód osobowy",
+    "word": "Samochód",
     "category": "Pojazdy i Maszyny",
-    "hint": "Karoseria"
+    "hint": "Niezależność"
   },
   {
     "word": "Kabriolet",
     "category": "Pojazdy i Maszyny",
-    "hint": "Dach"
+    "hint": "Wiatr"
   },
   {
     "word": "Limuzyna",
     "category": "Pojazdy i Maszyny",
-    "hint": "Szyby"
+    "hint": "Prestiż"
   },
   {
     "word": "Taksówka",
     "category": "Pojazdy i Maszyny",
-    "hint": "Kogut"
+    "hint": "Pośpiech"
   },
   {
     "word": "Karetka",
     "category": "Pojazdy i Maszyny",
-    "hint": "Koguty"
-  },
-  {
-    "word": "Wóz strażacki",
-    "category": "Pojazdy i Maszyny",
-    "hint": "Pompa"
+    "hint": "Ratunek"
   },
   {
     "word": "Radiowóz",
     "category": "Pojazdy i Maszyny",
-    "hint": "Patrol"
+    "hint": "Sygnał"
   },
   {
     "word": "Śmieciarka",
     "category": "Pojazdy i Maszyny",
-    "hint": "Prasa"
+    "hint": "Porządek"
   },
   {
-    "word": "Autobus miejski",
+    "word": "Autobus",
     "category": "Pojazdy i Maszyny",
-    "hint": "Przystanek"
+    "hint": "Wspólnota"
   },
   {
     "word": "Autokar",
     "category": "Pojazdy i Maszyny",
-    "hint": "Podróż"
+    "hint": "Wycieczka"
   },
   {
     "word": "Tramwaj",
     "category": "Pojazdy i Maszyny",
-    "hint": "Pantograf"
+    "hint": "Miasto"
   },
   {
     "word": "Pociąg",
     "category": "Pojazdy i Maszyny",
-    "hint": "Wagony"
+    "hint": "Krajobraz"
   },
   {
     "word": "Metro",
     "category": "Pojazdy i Maszyny",
-    "hint": "Podziemie"
+    "hint": "Ciemność"
   },
   {
     "word": "Lokomotywa",
     "category": "Pojazdy i Maszyny",
-    "hint": "Trakcja"
+    "hint": "Siła"
   },
   {
     "word": "Ciężarówka",
     "category": "Pojazdy i Maszyny",
-    "hint": "Naczepa"
+    "hint": "Dostawa"
   },
   {
     "word": "Traktor",
     "category": "Pojazdy i Maszyny",
-    "hint": "Bieżnik"
+    "hint": "Gospodarstwo"
   },
   {
     "word": "Kombajn",
     "category": "Pojazdy i Maszyny",
-    "hint": "Żniwa"
+    "hint": "Lato"
   },
   {
     "word": "Koparka",
     "category": "Pojazdy i Maszyny",
-    "hint": "Łyżka"
+    "hint": "Zmiana"
   },
   {
     "word": "Spychacz",
     "category": "Pojazdy i Maszyny",
-    "hint": "Gąsienice"
+    "hint": "Teren"
   },
   {
     "word": "Dźwig",
     "category": "Pojazdy i Maszyny",
-    "hint": "Wysięgnik"
+    "hint": "Wysokość"
   },
   {
     "word": "Walec",
     "category": "Pojazdy i Maszyny",
-    "hint": "Bęben"
-  },
-  {
-    "word": "Wózek widłowy",
-    "category": "Pojazdy i Maszyny",
-    "hint": "Widły"
+    "hint": "Nawierzchnia"
   },
   {
     "word": "Kajak",
     "category": "Pojazdy i Maszyny",
-    "hint": "Wiosło"
+    "hint": "Przygoda"
   },
   {
     "word": "Ponton",
     "category": "Pojazdy i Maszyny",
-    "hint": "Komory"
+    "hint": "Wypoczynek"
   },
   {
     "word": "Żaglówka",
     "category": "Pojazdy i Maszyny",
-    "hint": "Żagiel"
+    "hint": "Cisza"
   },
   {
     "word": "Jacht",
     "category": "Pojazdy i Maszyny",
-    "hint": "Pokład"
+    "hint": "Luksus"
   },
   {
-    "word": "Statek wycieczkowy",
+    "word": "Statek",
     "category": "Pojazdy i Maszyny",
-    "hint": "Kajuta"
+    "hint": "Rejs"
   },
   {
     "word": "Prom",
     "category": "Pojazdy i Maszyny",
-    "hint": "Przeprawa"
+    "hint": "Brzeg"
   },
   {
     "word": "Barka",
     "category": "Pojazdy i Maszyny",
-    "hint": "Kadłub"
+    "hint": "Nurt"
   },
   {
     "word": "Holownik",
     "category": "Pojazdy i Maszyny",
-    "hint": "Moc"
+    "hint": "Asysta"
   },
   {
-    "word": "Kuter rybacki",
+    "word": "Kuter",
     "category": "Pojazdy i Maszyny",
-    "hint": "Sieci"
+    "hint": "Fale"
   },
   {
     "word": "Motorówka",
     "category": "Pojazdy i Maszyny",
-    "hint": "Śruba"
-  },
-  {
-    "word": "Skuter wodny",
-    "category": "Pojazdy i Maszyny",
-    "hint": "Fala"
+    "hint": "Adrenalina"
   },
   {
     "word": "Lodołamacz",
     "category": "Pojazdy i Maszyny",
-    "hint": "Dziób"
+    "hint": "Wytrwałość"
   },
   {
-    "word": "Okręt podwodny",
+    "word": "Samolot",
     "category": "Pojazdy i Maszyny",
-    "hint": "Peryskop"
-  },
-  {
-    "word": "Samolot pasażerski",
-    "category": "Pojazdy i Maszyny",
-    "hint": "Skrzydła"
+    "hint": "Odległość"
   },
   {
     "word": "Awionetka",
     "category": "Pojazdy i Maszyny",
-    "hint": "Śmigło"
+    "hint": "Krajobraz"
   },
   {
     "word": "Szybowiec",
@@ -3117,177 +2917,157 @@
   {
     "word": "Helikopter",
     "category": "Pojazdy i Maszyny",
-    "hint": "Wirnik"
+    "hint": "Zasięg"
   },
   {
-    "word": "Balon na gorące powietrze",
+    "word": "Balon",
     "category": "Pojazdy i Maszyny",
-    "hint": "Kosz"
+    "hint": "Spokój"
   },
   {
     "word": "Sterowiec",
     "category": "Pojazdy i Maszyny",
-    "hint": "Powłoka"
+    "hint": "Historia"
   },
   {
-    "word": "Rakieta kosmiczna",
+    "word": "Rakieta",
     "category": "Pojazdy i Maszyny",
-    "hint": "Paliwo"
+    "hint": "Odzysk"
   },
   {
-    "word": "Łazik marsjański",
+    "word": "Łazik",
     "category": "Pojazdy i Maszyny",
-    "hint": "Kamery"
+    "hint": "Samotność"
   },
   {
     "word": "Tęcza",
     "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Kolory"
+    "hint": "Optymizm"
   },
   {
     "word": "Błyskawica",
     "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Wyładowanie"
+    "hint": "Moment"
   },
   {
     "word": "Grzmot",
     "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Huk"
+    "hint": "Dźwięk"
   },
   {
     "word": "Burza",
     "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Nawałnica"
+    "hint": "Niepokój"
   },
   {
     "word": "Tornado",
     "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Lej"
+    "hint": "Zniszczenie"
   },
   {
     "word": "Huragan",
     "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Wiatr"
+    "hint": "Potęga"
   },
   {
-    "word": "Zorza polarna",
+    "word": "Zorza",
     "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Zieleń"
-  },
-  {
-    "word": "Trzęsienie ziemi",
-    "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Drgania"
+    "hint": "Cud"
   },
   {
     "word": "Tsunami",
     "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Fala"
+    "hint": "Ściana"
   },
   {
     "word": "Lawina",
     "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Osuwisko"
+    "hint": "Zaskoczenie"
   },
   {
     "word": "Mgła",
     "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Para"
+    "hint": "Niepewność"
   },
   {
     "word": "Rosa",
     "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Krople"
+    "hint": "Świt"
   },
   {
     "word": "Szron",
     "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Kryształki"
+    "hint": "Chłód"
   },
   {
     "word": "Grad",
     "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Bryłki"
+    "hint": "Niespodzianka"
   },
   {
     "word": "Śnieżyca",
     "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Zawieja"
+    "hint": "Zamieć"
   },
   {
     "word": "Ulewa",
     "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Deszcz"
+    "hint": "Obfitość"
   },
   {
-    "word": "Sopel lodu",
+    "word": "Sopel",
     "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Zwis"
+    "hint": "Zima"
   },
   {
     "word": "Słońce",
     "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Promienie"
+    "hint": "Życie"
   },
   {
     "word": "Księżyc",
     "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Fazy"
+    "hint": "Sny"
   },
   {
     "word": "Gwiazda",
     "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Punkt"
+    "hint": "Życzenie"
   },
   {
     "word": "Kometa",
     "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Warkocz"
+    "hint": "Zjawisko"
   },
   {
     "word": "Meteor",
     "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Błysk"
+    "hint": "Sekunda"
   },
   {
     "word": "Asteroida",
     "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Skała"
-  },
-  {
-    "word": "Czarna dziura",
-    "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Grawitacja"
-  },
-  {
-    "word": "Droga Mleczna",
-    "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Spirala"
-  },
-  {
-    "word": "Zaćmienie słońca",
-    "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Cień"
+    "hint": "Pustka"
   },
   {
     "word": "Gejzer",
     "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Wytrysk"
+    "hint": "Natura"
   },
   {
-    "word": "Rafa koralowa",
+    "word": "Rafa",
     "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Polipy"
+    "hint": "Bogactwo"
   },
   {
-    "word": "Szczyt górski",
+    "word": "Szczyt",
     "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Grań"
+    "hint": "Cel"
   },
   {
     "word": "Wąwóz",
     "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Stromość"
+    "hint": "Głębokość"
   },
   {
     "word": "Półwysep",
@@ -3297,1267 +3077,1157 @@
   {
     "word": "Zatoka",
     "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Brzeg"
+    "hint": "Spokój"
   },
   {
     "word": "Dąb",
     "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Żołędzie"
+    "hint": "Wiek"
   },
   {
     "word": "Sosna",
     "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Szyszki"
+    "hint": "Żywica"
   },
   {
     "word": "Świerk",
     "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Igły"
+    "hint": "Zieleń"
   },
   {
     "word": "Brzoza",
     "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Kora"
+    "hint": "Biel"
   },
   {
-    "word": "Wierzba płacząca",
+    "word": "Wierzba",
     "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Gałązki"
+    "hint": "Smutek"
   },
   {
     "word": "Kaktus",
     "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Kolce"
+    "hint": "Odporność"
   },
   {
     "word": "Lotos",
     "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Woda"
+    "hint": "Czystość"
   },
   {
     "word": "Borowik",
     "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Kapelusz"
+    "hint": "Nagroda"
   },
   {
     "word": "Muchomor",
     "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Kropki"
+    "hint": "Pozór"
   },
   {
     "word": "Róża",
     "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Płatki"
+    "hint": "Uczucie"
   },
   {
     "word": "Tulipan",
     "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Cebulka"
+    "hint": "Wiosna"
   },
   {
     "word": "Słonecznik",
     "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Pestki"
+    "hint": "Ciepło"
   },
   {
     "word": "Stokrotka",
     "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Łąka"
+    "hint": "Niewinność"
   },
   {
     "word": "Mlecz",
     "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Dmuchawiec"
+    "hint": "Złoto"
   },
   {
     "word": "Bambus",
     "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Łodyga"
+    "hint": "Elastyczność"
   },
   {
     "word": "Baobab",
     "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Pień"
+    "hint": "Potęga"
   },
   {
     "word": "Sekwoja",
     "category": "Przyroda, Geografia i Kosmos",
-    "hint": "Wysokość"
-  },
-  {
-    "word": "Piłka nożna",
-    "category": "Sport, Hobby i Gry",
-    "hint": "Bramka"
+    "hint": "Wieczność"
   },
   {
     "word": "Koszykówka",
     "category": "Sport, Hobby i Gry",
-    "hint": "Obręcz"
+    "hint": "Wzrost"
   },
   {
     "word": "Siatkówka",
     "category": "Sport, Hobby i Gry",
-    "hint": "Siatka"
-  },
-  {
-    "word": "Piłka ręczna",
-    "category": "Sport, Hobby i Gry",
-    "hint": "Parkiet"
-  },
-  {
-    "word": "Tenis ziemny",
-    "category": "Sport, Hobby i Gry",
-    "hint": "Rakieta"
-  },
-  {
-    "word": "Tenis stołowy",
-    "category": "Sport, Hobby i Gry",
-    "hint": "Stół"
+    "hint": "Zgranie"
   },
   {
     "word": "Badminton",
     "category": "Sport, Hobby i Gry",
-    "hint": "Lotka"
+    "hint": "Lekkość"
   },
   {
-    "word": "Hokej na lodzie",
+    "word": "Hokej",
     "category": "Sport, Hobby i Gry",
-    "hint": "Krążek"
+    "hint": "Dynamika"
   },
   {
     "word": "Łyżwiarstwo",
     "category": "Sport, Hobby i Gry",
-    "hint": "Płozy"
+    "hint": "Płynność"
   },
   {
     "word": "Narciarstwo",
     "category": "Sport, Hobby i Gry",
-    "hint": "Stok"
+    "hint": "Prędkość"
   },
   {
     "word": "Snowboard",
     "category": "Sport, Hobby i Gry",
-    "hint": "Wiązania"
+    "hint": "Styl"
   },
   {
     "word": "Bieganie",
     "category": "Sport, Hobby i Gry",
-    "hint": "Kroki"
+    "hint": "Endorfiny"
   },
   {
     "word": "Maraton",
     "category": "Sport, Hobby i Gry",
-    "hint": "Dystans"
+    "hint": "Wytrwałość"
   },
   {
     "word": "Pływanie",
     "category": "Sport, Hobby i Gry",
-    "hint": "Tor"
+    "hint": "Oddech"
   },
   {
     "word": "Szachy",
     "category": "Sport, Hobby i Gry",
-    "hint": "Pola"
+    "hint": "Strategia"
   },
   {
     "word": "Warcaby",
     "category": "Sport, Hobby i Gry",
-    "hint": "Pionki"
+    "hint": "Przekątna"
   },
   {
     "word": "Poker",
     "category": "Sport, Hobby i Gry",
-    "hint": "Stawka"
+    "hint": "Twarz"
   },
   {
-    "word": "Kostka do gry",
+    "word": "Kostka",
     "category": "Sport, Hobby i Gry",
-    "hint": "Oczka"
-  },
-  {
-    "word": "Kostka Rubika",
-    "category": "Sport, Hobby i Gry",
-    "hint": "Ścianki"
+    "hint": "Los"
   },
   {
     "word": "Puzzle",
     "category": "Sport, Hobby i Gry",
-    "hint": "Elementy"
+    "hint": "Układanka"
   },
   {
-    "word": "Lego",
+    "word": "Klocki",
     "category": "Sport, Hobby i Gry",
-    "hint": "Wypustki"
+    "hint": "Kreacja"
   },
   {
     "word": "Bilard",
     "category": "Sport, Hobby i Gry",
-    "hint": "Kije"
+    "hint": "Geometria"
   },
   {
     "word": "Kręgle",
     "category": "Sport, Hobby i Gry",
-    "hint": "Kula"
+    "hint": "Czystość"
   },
   {
     "word": "Rzutki",
     "category": "Sport, Hobby i Gry",
-    "hint": "Tarcza"
+    "hint": "Oko"
   },
   {
     "word": "Łucznictwo",
     "category": "Sport, Hobby i Gry",
-    "hint": "Cięciwa"
+    "hint": "Skupienie"
   },
   {
     "word": "Szermierka",
     "category": "Sport, Hobby i Gry",
-    "hint": "Maska"
+    "hint": "Refleks"
   },
   {
     "word": "Boks",
     "category": "Sport, Hobby i Gry",
-    "hint": "Rękawice"
+    "hint": "Dystans"
   },
   {
     "word": "Judo",
     "category": "Sport, Hobby i Gry",
-    "hint": "Mata"
+    "hint": "Szacunek"
   },
   {
     "word": "Karate",
     "category": "Sport, Hobby i Gry",
-    "hint": "Kimono"
+    "hint": "Dyscyplina"
   },
   {
     "word": "Wspinaczka",
     "category": "Sport, Hobby i Gry",
-    "hint": "Uprząż"
-  },
-  {
-    "word": "Skoki narciarskie",
-    "category": "Sport, Hobby i Gry",
-    "hint": "Rozbieg"
+    "hint": "Zaufanie"
   },
   {
     "word": "Kolarstwo",
     "category": "Sport, Hobby i Gry",
-    "hint": "Peleton"
+    "hint": "Wysiłek"
   },
   {
     "word": "Wioślarstwo",
     "category": "Sport, Hobby i Gry",
-    "hint": "Osada"
+    "hint": "Rytm"
   },
   {
     "word": "Windsurfing",
     "category": "Sport, Hobby i Gry",
-    "hint": "Pędnik"
+    "hint": "Balans"
   },
   {
     "word": "Kitesurfing",
     "category": "Sport, Hobby i Gry",
-    "hint": "Latawiec"
-  },
-  {
-    "word": "Spadochroniarstwo",
-    "category": "Sport, Hobby i Gry",
-    "hint": "Skok"
+    "hint": "Powietrze"
   },
   {
     "word": "Wędkarstwo",
     "category": "Sport, Hobby i Gry",
-    "hint": "Żyłka"
+    "hint": "Cierpliwość"
   },
   {
     "word": "Gitara",
     "category": "Sport, Hobby i Gry",
-    "hint": "Struny"
+    "hint": "Nastroje"
   },
   {
     "word": "Pianino",
     "category": "Sport, Hobby i Gry",
-    "hint": "Klawisze"
+    "hint": "Klasyka"
   },
   {
     "word": "Perkusja",
     "category": "Sport, Hobby i Gry",
-    "hint": "Talerze"
+    "hint": "Serce"
   },
   {
     "word": "Skrzypce",
     "category": "Sport, Hobby i Gry",
-    "hint": "Smyczek"
+    "hint": "Emocje"
   },
   {
     "word": "Trąbka",
     "category": "Sport, Hobby i Gry",
-    "hint": "Wentyle"
+    "hint": "Blask"
   },
   {
     "word": "Saksofon",
     "category": "Sport, Hobby i Gry",
-    "hint": "Stroik"
+    "hint": "Klimat"
   },
   {
-    "word": "Harmonijka ustna",
+    "word": "Harmonijka",
     "category": "Sport, Hobby i Gry",
-    "hint": "Kanały"
+    "hint": "Kieszeń"
   },
   {
     "word": "Flet",
     "category": "Sport, Hobby i Gry",
-    "hint": "Otwory"
+    "hint": "Powiew"
   },
   {
     "word": "Akordeon",
     "category": "Sport, Hobby i Gry",
-    "hint": "Miech"
+    "hint": "Biesiada"
   },
   {
     "word": "Karaoke",
     "category": "Sport, Hobby i Gry",
-    "hint": "Podkład"
+    "hint": "Odwaga"
   },
   {
     "word": "Origami",
     "category": "Sport, Hobby i Gry",
-    "hint": "Zagięcia"
+    "hint": "Delikatność"
   },
   {
     "word": "Garncarstwo",
     "category": "Sport, Hobby i Gry",
-    "hint": "Glina"
+    "hint": "Kształt"
   },
   {
     "word": "Szydełkowanie",
     "category": "Sport, Hobby i Gry",
-    "hint": "Haczyk"
+    "hint": "Spokój"
   },
   {
     "word": "Koszula",
     "category": "Ubiór, Akcesoria i Biżuteria",
-    "hint": "Guziki"
+    "hint": "Szyk"
   },
   {
     "word": "Krawat",
     "category": "Ubiór, Akcesoria i Biżuteria",
-    "hint": "Węzeł"
+    "hint": "Oficjalność"
   },
   {
     "word": "Garnitur",
     "category": "Ubiór, Akcesoria i Biżuteria",
-    "hint": "Elegancja"
+    "hint": "Uroczystość"
   },
   {
     "word": "Sukienka",
     "category": "Ubiór, Akcesoria i Biżuteria",
-    "hint": "Krój"
+    "hint": "Urok"
   },
   {
     "word": "Spódnica",
     "category": "Ubiór, Akcesoria i Biżuteria",
-    "hint": "Talia"
+    "hint": "Swoboda"
   },
   {
     "word": "Jeansy",
     "category": "Ubiór, Akcesoria i Biżuteria",
-    "hint": "Nity"
+    "hint": "Codzienność"
   },
   {
     "word": "Sweter",
     "category": "Ubiór, Akcesoria i Biżuteria",
-    "hint": "Dzianina"
+    "hint": "Zimno"
   },
   {
     "word": "Bluza",
     "category": "Ubiór, Akcesoria i Biżuteria",
-    "hint": "Kaptur"
+    "hint": "Komfort"
   },
   {
     "word": "Kurtka",
     "category": "Ubiór, Akcesoria i Biżuteria",
-    "hint": "Zamek"
+    "hint": "Ochrona"
   },
   {
     "word": "Płaszcz",
     "category": "Ubiór, Akcesoria i Biżuteria",
-    "hint": "Klapy"
+    "hint": "Spacer"
   },
   {
-    "word": "Czapka z pomponem",
+    "word": "Czapka",
     "category": "Ubiór, Akcesoria i Biżuteria",
-    "hint": "Głowa"
+    "hint": "Mrozik"
   },
   {
     "word": "Kapelusz",
     "category": "Ubiór, Akcesoria i Biżuteria",
-    "hint": "Rondo"
+    "hint": "Klasa"
   },
   {
     "word": "Cylinder",
     "category": "Ubiór, Akcesoria i Biżuteria",
-    "hint": "Wysokość"
+    "hint": "Magia"
   },
   {
     "word": "Szalik",
     "category": "Ubiór, Akcesoria i Biżuteria",
-    "hint": "Szyja"
+    "hint": "Otulenie"
   },
   {
     "word": "Rękawiczki",
     "category": "Ubiór, Akcesoria i Biżuteria",
-    "hint": "Palce"
+    "hint": "Dotyk"
   },
   {
     "word": "Skarpetki",
     "category": "Ubiór, Akcesoria i Biżuteria",
-    "hint": "Pięta"
+    "hint": "Miękkość"
   },
   {
     "word": "Trampki",
     "category": "Ubiór, Akcesoria i Biżuteria",
-    "hint": "Podeszwa"
+    "hint": "Krok"
   },
   {
     "word": "Szpilki",
     "category": "Ubiór, Akcesoria i Biżuteria",
-    "hint": "Obcas"
+    "hint": "Wysokość"
   },
   {
     "word": "Kozaki",
     "category": "Ubiór, Akcesoria i Biżuteria",
-    "hint": "Cholewka"
+    "hint": "Zima"
   },
   {
     "word": "Kalosze",
     "category": "Ubiór, Akcesoria i Biżuteria",
-    "hint": "Guma"
+    "hint": "Kałuża"
   },
   {
     "word": "Sandały",
     "category": "Ubiór, Akcesoria i Biżuteria",
-    "hint": "Paski"
+    "hint": "Wakacje"
   },
   {
     "word": "Klapki",
     "category": "Ubiór, Akcesoria i Biżuteria",
-    "hint": "Pianka"
+    "hint": "Luz"
   },
   {
-    "word": "Pasek do spodni",
+    "word": "Pasek",
     "category": "Ubiór, Akcesoria i Biżuteria",
-    "hint": "Klamra"
+    "hint": "Dopasowanie"
   },
   {
     "word": "Torebka",
     "category": "Ubiór, Akcesoria i Biżuteria",
-    "hint": "Pasek"
+    "hint": "Drobiazgi"
   },
   {
     "word": "Walizka",
     "category": "Ubiór, Akcesoria i Biżuteria",
-    "hint": "Rączka"
+    "hint": "Wyjazd"
   },
   {
     "word": "Pierścionek",
     "category": "Ubiór, Akcesoria i Biżuteria",
-    "hint": "Oczko"
+    "hint": "Obietnica"
   },
   {
     "word": "Naszyjnik",
     "category": "Ubiór, Akcesoria i Biżuteria",
-    "hint": "Zawieszka"
+    "hint": "Ozdoba"
   },
   {
     "word": "Kolczyki",
     "category": "Ubiór, Akcesoria i Biżuteria",
-    "hint": "Zapięcie"
+    "hint": "Blask"
   },
   {
     "word": "Bransoletka",
     "category": "Ubiór, Akcesoria i Biżuteria",
-    "hint": "Nadgarstek"
-  },
-  {
-    "word": "Spinki do mankietów",
-    "category": "Ubiór, Akcesoria i Biżuteria",
-    "hint": "Mankiety"
+    "hint": "Pamiątka"
   },
   {
     "word": "Łóżko",
     "category": "Wyposażenie Domu i Meble",
-    "hint": "Materac"
+    "hint": "Sny"
   },
   {
     "word": "Sofa",
     "category": "Wyposażenie Domu i Meble",
-    "hint": "Oparcie"
+    "hint": "Popołudnie"
   },
   {
     "word": "Fotel",
     "category": "Wyposażenie Domu i Meble",
-    "hint": "Siedzisko"
+    "hint": "Samotność"
   },
   {
     "word": "Stół",
     "category": "Wyposażenie Domu i Meble",
-    "hint": "Nogi"
+    "hint": "Wspólnota"
   },
   {
     "word": "Krzesło",
     "category": "Wyposażenie Domu i Meble",
-    "hint": "Oparcie"
+    "hint": "Miejsce"
   },
   {
     "word": "Szafa",
     "category": "Wyposażenie Domu i Meble",
-    "hint": "Drzwi"
+    "hint": "Wnętrze"
   },
   {
     "word": "Komoda",
     "category": "Wyposażenie Domu i Meble",
-    "hint": "Szuflady"
+    "hint": "Przechowanie"
   },
   {
-    "word": "Regał na książki",
+    "word": "Regał",
     "category": "Wyposażenie Domu i Meble",
-    "hint": "Półki"
+    "hint": "Zbiór"
   },
   {
     "word": "Biurko",
     "category": "Wyposażenie Domu i Meble",
-    "hint": "Blat"
+    "hint": "Skupienie"
   },
   {
     "word": "Wanna",
     "category": "Wyposażenie Domu i Meble",
-    "hint": "Odpływ"
+    "hint": "Relaks"
   },
   {
     "word": "Prysznic",
     "category": "Wyposażenie Domu i Meble",
-    "hint": "Deszczownica"
+    "hint": "Pobudka"
   },
   {
     "word": "Umywalka",
     "category": "Wyposażenie Domu i Meble",
-    "hint": "Kran"
+    "hint": "Świeżość"
   },
   {
     "word": "Zlew",
     "category": "Wyposażenie Domu i Meble",
-    "hint": "Bateria"
+    "hint": "Kuchnia"
   },
   {
     "word": "Dywan",
     "category": "Wyposażenie Domu i Meble",
-    "hint": "Runo"
+    "hint": "Wygłuszenie"
   },
   {
     "word": "Firanka",
     "category": "Wyposażenie Domu i Meble",
-    "hint": "Karnisz"
+    "hint": "Światło"
   },
   {
     "word": "Zasłona",
     "category": "Wyposażenie Domu i Meble",
-    "hint": "Tkanina"
+    "hint": "Intymność"
   },
   {
     "word": "Żyrandol",
     "category": "Wyposażenie Domu i Meble",
-    "hint": "Sufit"
+    "hint": "Jasność"
   },
   {
-    "word": "Lampa nocna",
+    "word": "Lampa",
     "category": "Wyposażenie Domu i Meble",
-    "hint": "Abażur"
+    "hint": "Wieczór"
   },
   {
     "word": "Wazon",
     "category": "Wyposażenie Domu i Meble",
-    "hint": "Kwiaty"
+    "hint": "Życie"
   },
   {
-    "word": "Ramka na zdjęcia",
+    "word": "Ramka",
     "category": "Wyposażenie Domu i Meble",
-    "hint": "Szkło"
+    "hint": "Wspomnienie"
   },
   {
-    "word": "Zegar ścienny",
+    "word": "Zegar",
     "category": "Wyposażenie Domu i Meble",
-    "hint": "Tarcza"
+    "hint": "Rytm"
   },
   {
     "word": "Kominek",
     "category": "Wyposażenie Domu i Meble",
-    "hint": "Płomień"
+    "hint": "Ciepło"
   },
   {
     "word": "Rycerz",
     "category": "Mitologia, Baśnie i Historia",
-    "hint": "Zbroja"
+    "hint": "Honor"
   },
   {
     "word": "Pirat",
     "category": "Mitologia, Baśnie i Historia",
-    "hint": "Bandera"
+    "hint": "Skarb"
   },
   {
     "word": "Wiking",
     "category": "Mitologia, Baśnie i Historia",
-    "hint": "Topór"
+    "hint": "Wyprawa"
   },
   {
     "word": "Samuraj",
     "category": "Mitologia, Baśnie i Historia",
-    "hint": "Katana"
+    "hint": "Wierność"
   },
   {
     "word": "Ninja",
     "category": "Mitologia, Baśnie i Historia",
-    "hint": "Cień"
+    "hint": "Cisza"
   },
   {
     "word": "Kowboj",
     "category": "Mitologia, Baśnie i Historia",
-    "hint": "Ostrogi"
+    "hint": "Horyzont"
   },
   {
     "word": "Król",
     "category": "Mitologia, Baśnie i Historia",
-    "hint": "Korona"
+    "hint": "Odpowiedzialność"
   },
   {
     "word": "Królowa",
     "category": "Mitologia, Baśnie i Historia",
-    "hint": "Tron"
+    "hint": "Dyplomacja"
   },
   {
     "word": "Książę",
     "category": "Mitologia, Baśnie i Historia",
-    "hint": "Dwór"
+    "hint": "Młodość"
   },
   {
     "word": "Księżniczka",
     "category": "Mitologia, Baśnie i Historia",
-    "hint": "Wieża"
+    "hint": "Los"
   },
   {
     "word": "Czarodziej",
     "category": "Mitologia, Baśnie i Historia",
-    "hint": "Księga"
+    "hint": "Wiedza"
   },
   {
     "word": "Czarownica",
     "category": "Mitologia, Baśnie i Historia",
-    "hint": "Kocioł"
+    "hint": "Zioła"
   },
   {
     "word": "Smok",
     "category": "Mitologia, Baśnie i Historia",
-    "hint": "Ogień"
+    "hint": "Strażnik"
   },
   {
     "word": "Jednorożec",
     "category": "Mitologia, Baśnie i Historia",
-    "hint": "Róg"
+    "hint": "Czystość"
   },
   {
     "word": "Pegaz",
     "category": "Mitologia, Baśnie i Historia",
-    "hint": "Skrzydła"
+    "hint": "Natchnienie"
   },
   {
     "word": "Elf",
     "category": "Mitologia, Baśnie i Historia",
-    "hint": "Uszy"
+    "hint": "Długowieczność"
   },
   {
     "word": "Krasnolud",
     "category": "Mitologia, Baśnie i Historia",
-    "hint": "Broda"
+    "hint": "Rzemiosło"
   },
   {
     "word": "Wampir",
     "category": "Mitologia, Baśnie i Historia",
-    "hint": "Kły"
+    "hint": "Nieśmiertelność"
   },
   {
     "word": "Wilkołak",
     "category": "Mitologia, Baśnie i Historia",
-    "hint": "Pełnia"
+    "hint": "Natura"
   },
   {
     "word": "Zombie",
     "category": "Mitologia, Baśnie i Historia",
-    "hint": "Cmentarz"
+    "hint": "Koniec"
   },
   {
     "word": "Duch",
     "category": "Mitologia, Baśnie i Historia",
-    "hint": "Zjawa"
+    "hint": "Pamięć"
   },
   {
     "word": "Mumia",
     "category": "Mitologia, Baśnie i Historia",
-    "hint": "Bandaże"
+    "hint": "Bandaż"
   },
   {
     "word": "Faraon",
     "category": "Mitologia, Baśnie i Historia",
-    "hint": "Grobowiec"
+    "hint": "Wieczność"
   },
   {
     "word": "Piramida",
     "category": "Mitologia, Baśnie i Historia",
-    "hint": "Kamień"
+    "hint": "Trwałość"
   },
   {
     "word": "Sfinks",
     "category": "Mitologia, Baśnie i Historia",
-    "hint": "Zagadka"
+    "hint": "Milczenie"
   },
   {
     "word": "Skarb",
     "category": "Mitologia, Baśnie i Historia",
-    "hint": "Kufer"
+    "hint": "Pożądanie"
   },
   {
     "word": "Syrena",
     "category": "Mitologia, Baśnie i Historia",
-    "hint": "Ogon"
+    "hint": "Pokusa"
   },
   {
     "word": "Kosmita",
     "category": "Mitologia, Baśnie i Historia",
-    "hint": "Orbita"
+    "hint": "Obcość"
   },
   {
     "word": "UFO",
     "category": "Mitologia, Baśnie i Historia",
-    "hint": "Talerz"
+    "hint": "Zagadka"
   },
   {
-    "word": "Wehikuł czasu",
+    "word": "Różdżka",
     "category": "Mitologia, Baśnie i Historia",
-    "hint": "Epoka"
-  },
-  {
-    "word": "Magiczna różdżka",
-    "category": "Mitologia, Baśnie i Historia",
-    "hint": "Różdżka"
-  },
-  {
-    "word": "Lampa Alladyna",
-    "category": "Mitologia, Baśnie i Historia",
-    "hint": "Imbryk"
+    "hint": "Kierunek"
   },
   {
     "word": "Miecz",
     "category": "Mitologia, Baśnie i Historia",
-    "hint": "Rękojeść"
+    "hint": "Rozstrzygnięcie"
   },
   {
     "word": "Tarcza",
     "category": "Mitologia, Baśnie i Historia",
-    "hint": "Obrona"
+    "hint": "Ochrona"
   },
   {
     "word": "Katapulta",
     "category": "Mitologia, Baśnie i Historia",
-    "hint": "Ramię"
+    "hint": "Oblężenie"
   },
   {
     "word": "Armata",
     "category": "Mitologia, Baśnie i Historia",
-    "hint": "Lufa"
+    "hint": "Donośność"
   },
   {
-    "word": "Święty Graal",
+    "word": "Graal",
     "category": "Mitologia, Baśnie i Historia",
-    "hint": "Kielich"
-  },
-  {
-    "word": "Złote runo",
-    "category": "Mitologia, Baśnie i Historia",
-    "hint": "Skóra"
+    "hint": "Poszukiwanie"
   },
   {
     "word": "Kraken",
     "category": "Mitologia, Baśnie i Historia",
-    "hint": "Głębiny"
+    "hint": "Niezmierzoność"
   },
   {
     "word": "Cerber",
     "category": "Mitologia, Baśnie i Historia",
-    "hint": "Pies"
+    "hint": "Granica"
   },
   {
     "word": "Serce",
     "category": "Ciało, Zmysły i Uczucia",
-    "hint": "Puls"
+    "hint": "Emocje"
   },
   {
     "word": "Mózg",
     "category": "Ciało, Zmysły i Uczucia",
-    "hint": "Myśli"
+    "hint": "Rozsądek"
   },
   {
     "word": "Oko",
     "category": "Ciało, Zmysły i Uczucia",
-    "hint": "Źrenica"
+    "hint": "Świat"
   },
   {
     "word": "Ucho",
     "category": "Ciało, Zmysły i Uczucia",
-    "hint": "Słuch"
+    "hint": "Odbiór"
   },
   {
     "word": "Nos",
     "category": "Ciało, Zmysły i Uczucia",
-    "hint": "Węch"
+    "hint": "Intuicja"
   },
   {
     "word": "Usta",
     "category": "Ciało, Zmysły i Uczucia",
-    "hint": "Wargi"
+    "hint": "Wyraz"
   },
   {
     "word": "Dłoń",
     "category": "Ciało, Zmysły i Uczucia",
-    "hint": "Chwyt"
+    "hint": "Pomoc"
   },
   {
     "word": "Stopa",
     "category": "Ciało, Zmysły i Uczucia",
-    "hint": "Kroki"
+    "hint": "Kierunek"
   },
   {
     "word": "Uśmiech",
     "category": "Ciało, Zmysły i Uczucia",
-    "hint": "Radość"
+    "hint": "Otwartość"
   },
   {
     "word": "Łza",
     "category": "Ciało, Zmysły i Uczucia",
-    "hint": "Smutek"
+    "hint": "Uczucie"
   },
   {
-    "word": "Odcisk palca",
+    "word": "Odcisk",
     "category": "Ciało, Zmysły i Uczucia",
-    "hint": "Linie"
+    "hint": "Tożsamość"
   },
   {
     "word": "Cień",
     "category": "Ciało, Zmysły i Uczucia",
-    "hint": "Sylwetka"
+    "hint": "Wierność"
   },
   {
     "word": "Tablica",
     "category": "Szkoła i Edukacja",
-    "hint": "Kreda"
+    "hint": "Wyjaśnienie"
   },
   {
     "word": "Kreda",
     "category": "Szkoła i Edukacja",
-    "hint": "Biel"
+    "hint": "Ślad"
   },
   {
     "word": "Gąbka",
     "category": "Szkoła i Edukacja",
-    "hint": "Ścieranie"
+    "hint": "Czystość"
   },
   {
     "word": "Piórnik",
     "category": "Szkoła i Edukacja",
-    "hint": "Zamek"
+    "hint": "Porządek"
   },
   {
     "word": "Dziennik",
     "category": "Szkoła i Edukacja",
-    "hint": "Oceny"
+    "hint": "Obecność"
   },
   {
-    "word": "Dzwonek szkolny",
+    "word": "Dzwonek",
     "category": "Szkoła i Edukacja",
-    "hint": "Korytarz"
+    "hint": "Ukojenie"
   },
   {
-    "word": "Plecak szkolny",
+    "word": "Tornister",
     "category": "Szkoła i Edukacja",
-    "hint": "Tornister"
+    "hint": "Ciężar"
   },
   {
     "word": "Cyrkiel",
     "category": "Szkoła i Edukacja",
-    "hint": "Okrąg"
+    "hint": "Doskonałość"
   },
   {
     "word": "Kątomierz",
     "category": "Szkoła i Edukacja",
-    "hint": "Kąty"
+    "hint": "Pomiar"
   },
   {
     "word": "Ekierka",
     "category": "Szkoła i Edukacja",
-    "hint": "Trójkąt"
+    "hint": "Prostota"
   },
   {
     "word": "Świadectwo",
     "category": "Szkoła i Edukacja",
-    "hint": "Pasek"
+    "hint": "Podsumowanie"
   },
   {
     "word": "Dyplom",
     "category": "Szkoła i Edukacja",
-    "hint": "Papier"
+    "hint": "Duma"
   },
   {
     "word": "Teczka",
     "category": "Szkoła i Edukacja",
-    "hint": "Dokumenty"
+    "hint": "Dyskrecja"
   },
   {
     "word": "Flamaster",
     "category": "Szkoła i Edukacja",
-    "hint": "Barwnik"
+    "hint": "Intensywność"
   },
   {
     "word": "Korektor",
     "category": "Szkoła i Edukacja",
-    "hint": "Biel"
-  },
-  {
-    "word": "Klej biurowy",
-    "category": "Szkoła i Edukacja",
-    "hint": "Sztyft"
+    "hint": "Zamazanie"
   },
   {
     "word": "Plastelina",
     "category": "Szkoła i Edukacja",
-    "hint": "Lepienie"
+    "hint": "Forma"
   },
   {
     "word": "Modelina",
     "category": "Szkoła i Edukacja",
-    "hint": "Masa"
+    "hint": "Trwałość"
   },
   {
-    "word": "Blok rysunkowy",
+    "word": "Farby",
     "category": "Szkoła i Edukacja",
-    "hint": "Arkusze"
+    "hint": "Barwy"
   },
   {
-    "word": "Farby plakatowe",
+    "word": "Kredki",
     "category": "Szkoła i Edukacja",
-    "hint": "Słoiczek"
+    "hint": "Rysunek"
   },
   {
-    "word": "Kredki ołówkowe",
+    "word": "Pióro",
     "category": "Szkoła i Edukacja",
-    "hint": "Kolor"
-  },
-  {
-    "word": "Kredki świecowe",
-    "category": "Szkoła i Edukacja",
-    "hint": "Wosk"
-  },
-  {
-    "word": "Pióro wieczne",
-    "category": "Szkoła i Edukacja",
-    "hint": "Stalówka"
+    "hint": "Elegancja"
   },
   {
     "word": "Atrament",
     "category": "Szkoła i Edukacja",
-    "hint": "Plama"
+    "hint": "Trwałość"
   },
   {
-    "word": "Atlas geograficzny",
+    "word": "Atlas",
     "category": "Szkoła i Edukacja",
-    "hint": "Kontynenty"
+    "hint": "Wyprawa"
   },
   {
     "word": "Słownik",
     "category": "Szkoła i Edukacja",
-    "hint": "Hasła"
+    "hint": "Słownictwo"
   },
   {
     "word": "Encyklopedia",
     "category": "Szkoła i Edukacja",
-    "hint": "Wiedza"
+    "hint": "Zakres"
   },
   {
     "word": "Puzon",
     "category": "Muzyka i Dźwięk",
-    "hint": "Suwak"
+    "hint": "Donośność"
   },
   {
     "word": "Tuba",
     "category": "Muzyka i Dźwięk",
-    "hint": "Blacha"
+    "hint": "Głębia"
   },
   {
     "word": "Waltornia",
     "category": "Muzyka i Dźwięk",
-    "hint": "Róg"
+    "hint": "Las"
   },
   {
     "word": "Klarnet",
     "category": "Muzyka i Dźwięk",
-    "hint": "Drewno"
+    "hint": "Ciepło"
   },
   {
     "word": "Oboj",
     "category": "Muzyka i Dźwięk",
-    "hint": "Stroik"
+    "hint": "Tęsknota"
   },
   {
     "word": "Fagot",
     "category": "Muzyka i Dźwięk",
-    "hint": "Barwa"
+    "hint": "Niski"
   },
   {
     "word": "Harfa",
     "category": "Muzyka i Dźwięk",
-    "hint": "Struny"
+    "hint": "Anioł"
   },
   {
     "word": "Wiolonczela",
     "category": "Muzyka i Dźwięk",
-    "hint": "Podparcie"
+    "hint": "Ciepło"
   },
   {
     "word": "Kontrabas",
     "category": "Muzyka i Dźwięk",
-    "hint": "Bas"
+    "hint": "Podstawa"
   },
   {
     "word": "Ksylofon",
     "category": "Muzyka i Dźwięk",
-    "hint": "Sztabki"
+    "hint": "Radość"
   },
   {
     "word": "Trójkąt",
     "category": "Muzyka i Dźwięk",
-    "hint": "Stal"
+    "hint": "Czystość"
   },
   {
     "word": "Tamburyn",
     "category": "Muzyka i Dźwięk",
-    "hint": "Blaszki"
+    "hint": "Błysk"
   },
   {
     "word": "Kastaniety",
     "category": "Muzyka i Dźwięk",
-    "hint": "Rytm"
+    "hint": "Taniec"
   },
   {
     "word": "Kongi",
     "category": "Muzyka i Dźwięk",
-    "hint": "Membrana"
+    "hint": "Rytm"
   },
   {
     "word": "Syntezator",
     "category": "Muzyka i Dźwięk",
-    "hint": "Elektronika"
+    "hint": "Eksperyment"
   },
   {
     "word": "Wzmacniacz",
     "category": "Muzyka i Dźwięk",
-    "hint": "Kolumna"
+    "hint": "Głośność"
   },
   {
     "word": "Struna",
     "category": "Muzyka i Dźwięk",
-    "hint": "Drganie"
-  },
-  {
-    "word": "Kostka gitarowa",
-    "category": "Muzyka i Dźwięk",
-    "hint": "Szarpanie"
+    "hint": "Napięcie"
   },
   {
     "word": "Batuta",
     "category": "Muzyka i Dźwięk",
-    "hint": "Dyrygowanie"
+    "hint": "Skupienie"
   },
   {
-    "word": "Pulpit na nuty",
+    "word": "Pulpit",
     "category": "Muzyka i Dźwięk",
-    "hint": "Stojak"
+    "hint": "Oparcie"
   },
   {
     "word": "Nuty",
     "category": "Muzyka i Dźwięk",
-    "hint": "Pięciolinia"
+    "hint": "Zapis"
   },
   {
     "word": "Metronom",
     "category": "Muzyka i Dźwięk",
-    "hint": "Tempo"
+    "hint": "Równość"
   },
   {
     "word": "Chodnik",
     "category": "Miasto, Infrastruktura i Społeczeństwo",
-    "hint": "Kostka"
+    "hint": "Krok"
   },
   {
     "word": "Krawężnik",
     "category": "Miasto, Infrastruktura i Społeczeństwo",
-    "hint": "Krawędź"
+    "hint": "Granica"
   },
   {
-    "word": "Przejście dla pieszych",
+    "word": "Pasy",
     "category": "Miasto, Infrastruktura i Społeczeństwo",
-    "hint": "Pasy"
+    "hint": "Bezpieczeństwo"
   },
   {
-    "word": "Sygnalizacja świetlna",
+    "word": "Światła",
     "category": "Miasto, Infrastruktura i Społeczeństwo",
-    "hint": "Światła"
-  },
-  {
-    "word": "Latarnia uliczna",
-    "category": "Miasto, Infrastruktura i Społeczeństwo",
-    "hint": "Słup"
+    "hint": "Ruch"
   },
   {
     "word": "Ławka",
     "category": "Miasto, Infrastruktura i Społeczeństwo",
-    "hint": "Odpoczynek"
+    "hint": "Chwila"
   },
   {
-    "word": "Skrzynka pocztowa",
+    "word": "Skrzynka",
     "category": "Miasto, Infrastruktura i Społeczeństwo",
-    "hint": "Otwór"
+    "hint": "List"
   },
   {
     "word": "Biletomat",
     "category": "Miasto, Infrastruktura i Społeczeństwo",
-    "hint": "Bilety"
+    "hint": "Podróż"
   },
   {
     "word": "Bankomat",
     "category": "Miasto, Infrastruktura i Społeczeństwo",
-    "hint": "Gotówka"
+    "hint": "Potrzeba"
   },
   {
     "word": "Wpłatomierz",
     "category": "Miasto, Infrastruktura i Społeczeństwo",
-    "hint": "Depozyt"
+    "hint": "Zasilenie"
   },
   {
     "word": "Parkomat",
     "category": "Miasto, Infrastruktura i Społeczeństwo",
-    "hint": "Bilet"
+    "hint": "Czas"
   },
   {
     "word": "Barierka",
     "category": "Miasto, Infrastruktura i Społeczeństwo",
-    "hint": "Ogrodzenie"
+    "hint": "Ochrona"
   },
   {
-    "word": "Wiata przystankowa",
+    "word": "Wiata",
     "category": "Miasto, Infrastruktura i Społeczeństwo",
-    "hint": "Zadaszenie"
+    "hint": "Schronienie"
   },
   {
-    "word": "Koszyk sklepowy",
+    "word": "Wózek",
     "category": "Miasto, Infrastruktura i Społeczeństwo",
-    "hint": "Rączka"
+    "hint": "Zapasy"
   },
   {
-    "word": "Wózek sklepowy",
+    "word": "Kasa",
     "category": "Miasto, Infrastruktura i Społeczeństwo",
-    "hint": "Moneta"
+    "hint": "Rachunek"
   },
   {
-    "word": "Kasa fiskalna",
+    "word": "Budka",
     "category": "Miasto, Infrastruktura i Społeczeństwo",
-    "hint": "Paragon"
-  },
-  {
-    "word": "Skaner kodów",
-    "category": "Miasto, Infrastruktura i Społeczeństwo",
-    "hint": "Laser"
-  },
-  {
-    "word": "Budka telefoniczna",
-    "category": "Miasto, Infrastruktura i Społeczeństwo",
-    "hint": "Automat"
-  },
-  {
-    "word": "Fontanna miejska",
-    "category": "Miasto, Infrastruktura i Społeczeństwo",
-    "hint": "Plac"
-  },
-  {
-    "word": "Zegar wieżowy",
-    "category": "Miasto, Infrastruktura i Społeczeństwo",
-    "hint": "Tarcza"
-  },
-  {
-    "word": "Plac targowy",
-    "category": "Miasto, Infrastruktura i Społeczeństwo",
-    "hint": "Handel"
+    "hint": "Przeszłość"
   },
   {
     "word": "Rondo",
     "category": "Miasto, Infrastruktura i Społeczeństwo",
-    "hint": "Wyspa"
+    "hint": "Płynność"
   },
   {
     "word": "Autostrada",
     "category": "Miasto, Infrastruktura i Społeczeństwo",
-    "hint": "Węzeł"
-  },
-  {
-    "word": "Ścieżka rowerowa",
-    "category": "Miasto, Infrastruktura i Społeczeństwo",
-    "hint": "Asfalt"
+    "hint": "Przestrzeń"
   },
   {
     "word": "Koniczyna",
     "category": "Rośliny, Ogród i Las",
-    "hint": "Liście"
+    "hint": "Nadzieja"
   },
   {
     "word": "Paproć",
     "category": "Rośliny, Ogród i Las",
-    "hint": "Pióropusz"
+    "hint": "Cień"
   },
   {
     "word": "Mech",
     "category": "Rośliny, Ogród i Las",
-    "hint": "Runo"
+    "hint": "Miękkość"
   },
   {
     "word": "Porost",
     "category": "Rośliny, Ogród i Las",
-    "hint": "Skała"
+    "hint": "Czystość"
   },
   {
     "word": "Jodła",
     "category": "Rośliny, Ogród i Las",
-    "hint": "Szyszki"
+    "hint": "Zima"
   },
   {
     "word": "Modrzew",
     "category": "Rośliny, Ogród i Las",
-    "hint": "Igły"
+    "hint": "Jesień"
   },
   {
     "word": "Lipa",
     "category": "Rośliny, Ogród i Las",
-    "hint": "Kwiaty"
+    "hint": "Spokój"
   },
   {
     "word": "Kasztanowiec",
     "category": "Rośliny, Ogród i Las",
-    "hint": "Łupiny"
+    "hint": "Jesień"
   },
   {
     "word": "Jarzębina",
@@ -4567,227 +4237,177 @@
   {
     "word": "Głóg",
     "category": "Rośliny, Ogród i Las",
-    "hint": "Krzew"
-  },
-  {
-    "word": "Dzika róża",
-    "category": "Rośliny, Ogród i Las",
-    "hint": "Kolce"
+    "hint": "Zdrowie"
   },
   {
     "word": "Pokrzywa",
     "category": "Rośliny, Ogród i Las",
-    "hint": "Parzenie"
+    "hint": "Uwaga"
   },
   {
     "word": "Rumianek",
     "category": "Rośliny, Ogród i Las",
-    "hint": "Koszyczek"
+    "hint": "Ukojenie"
   },
   {
     "word": "Mięta",
     "category": "Rośliny, Ogród i Las",
-    "hint": "Orzeźwienie"
+    "hint": "Świeżość"
   },
   {
     "word": "Melisa",
     "category": "Rośliny, Ogród i Las",
-    "hint": "Ukojenie"
+    "hint": "Sen"
   },
   {
     "word": "Lawenda",
     "category": "Rośliny, Ogród i Las",
-    "hint": "Fiolet"
+    "hint": "Aromat"
   },
   {
     "word": "Krokus",
     "category": "Rośliny, Ogród i Las",
-    "hint": "Tatry"
+    "hint": "Budzenie"
   },
   {
     "word": "Przebiśnieg",
     "category": "Rośliny, Ogród i Las",
-    "hint": "Wiosna"
+    "hint": "Nadzieja"
   },
   {
     "word": "Konwalia",
     "category": "Rośliny, Ogród i Las",
-    "hint": "Dzwoneczki"
+    "hint": "Maj"
   },
   {
     "word": "Storczyk",
     "category": "Rośliny, Ogród i Las",
-    "hint": "Doniczka"
+    "hint": "Ozdoba"
   },
   {
     "word": "Begonia",
     "category": "Rośliny, Ogród i Las",
-    "hint": "Płatki"
+    "hint": "Ogród"
   },
   {
     "word": "Pelargonia",
     "category": "Rośliny, Ogród i Las",
-    "hint": "Balkon"
+    "hint": "Dom"
   },
   {
     "word": "Papirus",
     "category": "Rośliny, Ogród i Las",
-    "hint": "Trzcina"
+    "hint": "Historia"
   },
   {
     "word": "Krokiet",
     "category": "Kuchnia i Przysmaki Świata",
-    "hint": "Panierka"
-  },
-  {
-    "word": "Kluski śląskie",
-    "category": "Kuchnia i Przysmaki Świata",
-    "hint": "Dziurka"
+    "hint": "Uczta"
   },
   {
     "word": "Kopytka",
     "category": "Kuchnia i Przysmaki Świata",
-    "hint": "Krojenie"
-  },
-  {
-    "word": "Knypek",
-    "category": "Kuchnia i Przysmaki Świata",
-    "hint": "Ostrze"
+    "hint": "Dom"
   },
   {
     "word": "Oscypek",
     "category": "Kuchnia i Przysmaki Świata",
-    "hint": "Dym"
+    "hint": "Góry"
   },
   {
     "word": "Bryndza",
     "category": "Kuchnia i Przysmaki Świata",
-    "hint": "Słoność"
+    "hint": "Pasterz"
   },
   {
-    "word": "Karpacz",
+    "word": "Babka",
     "category": "Kuchnia i Przysmaki Świata",
-    "hint": "Góry"
-  },
-  {
-    "word": "Babka piaskowa",
-    "category": "Kuchnia i Przysmaki Świata",
-    "hint": "Forma"
-  },
-  {
-    "word": "Rogal świętomarciński",
-    "category": "Kuchnia i Przysmaki Świata",
-    "hint": "Nadzienie"
+    "hint": "Niedziela"
   },
   {
     "word": "Cynamon",
     "category": "Kuchnia i Przysmaki Świata",
-    "hint": "Kora"
+    "hint": "Ciepło"
   },
   {
     "word": "Wanilia",
     "category": "Kuchnia i Przysmaki Świata",
-    "hint": "Laska"
+    "hint": "Delikatność"
   },
   {
     "word": "Imbir",
     "category": "Kuchnia i Przysmaki Świata",
-    "hint": "Kłącze"
+    "hint": "Rozgrzanie"
   },
   {
     "word": "Kurkuma",
     "category": "Kuchnia i Przysmaki Świata",
-    "hint": "Żółć"
+    "hint": "Kolor"
   },
   {
     "word": "Goździki",
     "category": "Kuchnia i Przysmaki Świata",
-    "hint": "Pąki"
+    "hint": "Święta"
   },
   {
     "word": "Pieprz",
     "category": "Kuchnia i Przysmaki Świata",
-    "hint": "Ziarna"
+    "hint": "Wyrazistość"
   },
   {
-    "word": "Sól morska",
+    "word": "Sól",
     "category": "Kuchnia i Przysmaki Świata",
-    "hint": "Kryształki"
-  },
-  {
-    "word": "Cukier puder",
-    "category": "Kuchnia i Przysmaki Świata",
-    "hint": "Mielenie"
+    "hint": "Sens"
   },
   {
     "word": "Rodzynki",
     "category": "Kuchnia i Przysmaki Świata",
-    "hint": "Suszenie"
-  },
-  {
-    "word": "Orzech włoski",
-    "category": "Kuchnia i Przysmaki Świata",
-    "hint": "Skorupa"
-  },
-  {
-    "word": "Orzech laskowy",
-    "category": "Kuchnia i Przysmaki Świata",
-    "hint": "Leszczyna"
+    "hint": "Niespodzianka"
   },
   {
     "word": "Migdał",
     "category": "Kuchnia i Przysmaki Świata",
-    "hint": "Jądro"
+    "hint": "Aromat"
   },
   {
     "word": "Pistacje",
     "category": "Kuchnia i Przysmaki Świata",
-    "hint": "Łupina"
-  },
-  {
-    "word": "Pestki dyni",
-    "category": "Kuchnia i Przysmaki Świata",
-    "hint": "Nasiona"
-  },
-  {
-    "word": "Pestki słonecznika",
-    "category": "Kuchnia i Przysmaki Świata",
-    "hint": "Łuskanie"
+    "hint": "Zielony"
   },
   {
     "word": "Pochodnia",
     "category": "Cuda Świata, Rzeczywistość i Przedmioty Różne",
-    "hint": "Ogień"
+    "hint": "Odwaga"
   },
   {
-    "word": "Kandelabr",
+    "word": "Świecznik",
     "category": "Cuda Świata, Rzeczywistość i Przedmioty Różne",
-    "hint": "Świecznik"
+    "hint": "Uroczystość"
   },
   {
     "word": "Amulet",
     "category": "Cuda Świata, Rzeczywistość i Przedmioty Różne",
-    "hint": "Wisiorek"
+    "hint": "Wiara"
   },
   {
     "word": "Talizman",
     "category": "Cuda Świata, Rzeczywistość i Przedmioty Różne",
-    "hint": "Szczęście"
+    "hint": "Przeznaczenie"
   },
   {
     "word": "Kompas",
     "category": "Cuda Świata, Rzeczywistość i Przedmioty Różne",
-    "hint": "Igła"
+    "hint": "Północ"
   },
   {
     "word": "Sekstans",
     "category": "Cuda Świata, Rzeczywistość i Przedmioty Różne",
-    "hint": "Nawigacja"
+    "hint": "Gwiazdy"
   },
   {
     "word": "Klepsydra",
     "category": "Cuda Świata, Rzeczywistość i Przedmioty Różne",
-    "hint": "Piasek"
+    "hint": "Przemijanie"
   },
   {
     "word": "Pozytywka",
@@ -4797,342 +4417,867 @@
   {
     "word": "Monokl",
     "category": "Cuda Świata, Rzeczywistość i Przedmioty Różne",
-    "hint": "Oko"
+    "hint": "Elegancja"
   },
   {
-    "word": "Laska spacerowa",
+    "word": "Laska",
     "category": "Cuda Świata, Rzeczywistość i Przedmioty Różne",
-    "hint": "Gałka"
+    "hint": "Dojrzałość"
   },
   {
     "word": "Wachlarz",
     "category": "Cuda Świata, Rzeczywistość i Przedmioty Różne",
-    "hint": "Powiew"
-  },
-  {
-    "word": "Papier ścierny",
-    "category": "Cuda Świata, Rzeczywistość i Przedmioty Różne",
-    "hint": "Ziarno"
+    "hint": "Tajemnica"
   },
   {
     "word": "Szpachelka",
     "category": "Cuda Świata, Rzeczywistość i Przedmioty Różne",
-    "hint": "Gładź"
-  },
-  {
-    "word": "Paca tynkarska",
-    "category": "Cuda Świata, Rzeczywistość i Przedmioty Różne",
-    "hint": "Tynk"
+    "hint": "Wyrównanie"
   },
   {
     "word": "Kielnia",
     "category": "Cuda Świata, Rzeczywistość i Przedmioty Różne",
-    "hint": "Zaprawa"
+    "hint": "Budowa"
   },
   {
     "word": "Imadło",
     "category": "Cuda Świata, Rzeczywistość i Przedmioty Różne",
-    "hint": "Śruba"
+    "hint": "Uścisk"
   },
   {
     "word": "Kowadło",
     "category": "Cuda Świata, Rzeczywistość i Przedmioty Różne",
-    "hint": "Młot"
-  },
-  {
-    "word": "Miech kowalski",
-    "category": "Cuda Świata, Rzeczywistość i Przedmioty Różne",
-    "hint": "Dmuchanie"
+    "hint": "Moc"
   },
   {
     "word": "Dłuto",
     "category": "Cuda Świata, Rzeczywistość i Przedmioty Różne",
-    "hint": "Krawędź"
+    "hint": "Cierpliwość"
   },
   {
     "word": "Heblarka",
     "category": "Cuda Świata, Rzeczywistość i Przedmioty Różne",
-    "hint": "Wióry"
+    "hint": "Wiór"
   },
   {
     "word": "Bierki",
     "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Wiązka"
+    "hint": "Drżenie"
   },
   {
     "word": "Pchełki",
     "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Krążek"
+    "hint": "Zręczność"
   },
   {
     "word": "Domino",
     "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Kropki"
+    "hint": "Ciąg"
   },
   {
     "word": "Jojo",
     "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Sznurek"
+    "hint": "Powrót"
   },
   {
     "word": "Bączek",
     "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Wirowanie"
-  },
-  {
-    "word": "Klocki",
-    "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Budowanie"
-  },
-  {
-    "word": "Miś pluszowy",
-    "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Maskotka"
+    "hint": "Obrót"
   },
   {
     "word": "Lalka",
     "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Zabawka"
+    "hint": "Troska"
   },
   {
     "word": "Proca",
     "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Guma"
+    "hint": "Czelność"
   },
   {
     "word": "Latawiec",
     "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Wiatr"
-  },
-  {
-    "word": "Hula-hop",
-    "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Obręcz"
+    "hint": "Marzenie"
   },
   {
     "word": "Skakanka",
     "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Rączki"
-  },
-  {
-    "word": "Guma do skakania",
-    "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Skoki"
-  },
-  {
-    "word": "Bańki mydlane",
-    "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Piana"
-  },
-  {
-    "word": "Balonik wodny",
-    "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Woda"
+    "hint": "Kondycja"
   },
   {
     "word": "Cymbergaj",
     "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Stół"
+    "hint": "Refleks"
   },
   {
     "word": "Piłkarzyki",
     "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Pręty"
+    "hint": "Emocje"
   },
   {
-    "word": "Gra planszowa",
+    "word": "Planszówka",
     "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Pionki"
-  },
-  {
-    "word": "Monopoly",
-    "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Nieruchomości"
+    "hint": "Wieczór"
   },
   {
     "word": "Kalambury",
     "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Gesty"
-  },
-  {
-    "word": "Flawerpot",
-    "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Osłonka"
-  },
-  {
-    "word": "Karmnik dla ptaków",
-    "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Daszek"
-  },
-  {
-    "word": "Budka lęgowa",
-    "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Otwór"
+    "hint": "Śmiech"
   },
   {
     "word": "Huśtawka",
     "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Liny"
+    "hint": "Lot"
   },
   {
     "word": "Zjeżdżalnia",
     "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Ślizg"
+    "hint": "Śmiałość"
   },
   {
     "word": "Piaskownica",
     "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Piasek"
+    "hint": "Budowa"
   },
   {
-    "word": "Karuzela podwórkowa",
+    "word": "Karuzela",
     "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Obrót"
+    "hint": "Zawrót"
   },
   {
     "word": "Hamak",
     "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Siatka"
+    "hint": "Spokój"
   },
   {
     "word": "Leżak",
     "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Płótno"
+    "hint": "Słońce"
   },
   {
     "word": "Parawan",
     "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Plaża"
-  },
-  {
-    "word": "Koło ratunkowe",
-    "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Pływak"
-  },
-  {
-    "word": "Rękawki do pływania",
-    "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Wyporność"
-  },
-  {
-    "word": "Maska do nurkowania",
-    "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Szyba"
-  },
-  {
-    "word": "Fajka do nurkowania",
-    "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Rurka"
-  },
-  {
-    "word": "Płetwy",
-    "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Woda"
-  },
-  {
-    "word": "Ponton ratunkowy",
-    "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Tratwa"
+    "hint": "Granica"
   },
   {
     "word": "Kotwica",
     "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Łapy"
-  },
-  {
-    "word": "Koło sterowe",
-    "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Sternik"
+    "hint": "Stałość"
   },
   {
     "word": "Peryskop",
     "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Lustra"
+    "hint": "Głębia"
   },
   {
-    "word": "Skafander kosmiczny",
+    "word": "Skafander",
     "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Próżnia"
+    "hint": "Izolacja"
   },
   {
     "word": "Hełm",
     "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Skorupa"
+    "hint": "Bezpieczeństwo"
   },
   {
-    "word": "Maska gazowa",
+    "word": "Maska",
     "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Pochłaniacz"
+    "hint": "Ukrycie"
   },
   {
     "word": "Lornetka",
     "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Szkła"
+    "hint": "Dystans"
   },
   {
     "word": "Peruka",
     "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Włosy"
+    "hint": "Zmiana"
   },
   {
     "word": "Wąsy",
     "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Zarost"
+    "hint": "Wygląd"
   },
   {
     "word": "Broda",
     "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Zarost"
+    "hint": "Dojrzałość"
   },
   {
-    "word": "Tatuaż z henny",
+    "word": "Tatuaż",
     "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Wzór"
-  },
-  {
-    "word": "Piercing",
-    "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Przekłucie"
+    "hint": "Znak"
   },
   {
     "word": "Kufel",
     "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Ucho"
+    "hint": "Spotkanie"
   },
   {
     "word": "Kielich",
     "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Czara"
+    "hint": "Uczta"
   },
   {
     "word": "Puchar",
     "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Trofeum"
+    "hint": "Triumf"
   },
   {
     "word": "Medal",
     "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Wstążka"
+    "hint": "Wyróżnienie"
   },
   {
-    "word": "Wieniec laurowy",
+    "word": "Wieniec",
     "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Liście"
+    "hint": "Zwycięstwo"
   },
   {
-    "word": "Znicz olimpijski",
+    "word": "Znicz",
     "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Płomień"
-  },
-  {
-    "word": "Pochodnia olimpijska",
-    "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Sztafeta"
+    "hint": "Tradycja"
   },
   {
     "word": "Gwizdek",
     "category": "Gry, Zabawy i Rozrywka",
-    "hint": "Dźwięk"
+    "hint": "Uwaga"
+  },
+  {
+    "word": "Ryś",
+    "category": "Zwierzęta",
+    "hint": "Pędzelek"
+  },
+  {
+    "word": "Żbik",
+    "category": "Zwierzęta",
+    "hint": "Tajemnica"
+  },
+  {
+    "word": "Kuna",
+    "category": "Zwierzęta",
+    "hint": "Zwrotność"
+  },
+  {
+    "word": "Gronostaj",
+    "category": "Zwierzęta",
+    "hint": "Szlachetność"
+  },
+  {
+    "word": "Łasica",
+    "category": "Zwierzęta",
+    "hint": "Szybkość"
+  },
+  {
+    "word": "Daniel",
+    "category": "Zwierzęta",
+    "hint": "Ogród"
+  },
+  {
+    "word": "Muflon",
+    "category": "Zwierzęta",
+    "hint": "Zakręt"
+  },
+  {
+    "word": "Kozica",
+    "category": "Zwierzęta",
+    "hint": "Turnia"
+  },
+  {
+    "word": "Świstak",
+    "category": "Zwierzęta",
+    "hint": "Gwizd"
+  },
+  {
+    "word": "Jenot",
+    "category": "Zwierzęta",
+    "hint": "Spryt"
+  },
+  {
+    "word": "Bielik",
+    "category": "Zwierzęta",
+    "hint": "Godło"
+  },
+  {
+    "word": "Drozd",
+    "category": "Zwierzęta",
+    "hint": "Śpiew"
+  },
+  {
+    "word": "Kos",
+    "category": "Zwierzęta",
+    "hint": "Poranek"
+  },
+  {
+    "word": "Sikorka",
+    "category": "Zwierzęta",
+    "hint": "Zima"
+  },
+  {
+    "word": "Wilga",
+    "category": "Zwierzęta",
+    "hint": "Żółć"
+  },
+  {
+    "word": "Słowik",
+    "category": "Zwierzęta",
+    "hint": "Noc"
+  },
+  {
+    "word": "Jaskółka",
+    "category": "Zwierzęta",
+    "hint": "Wiosna"
+  },
+  {
+    "word": "Jerzyk",
+    "category": "Zwierzęta",
+    "hint": "Wiatr"
+  },
+  {
+    "word": "Skowronek",
+    "category": "Zwierzęta",
+    "hint": "Świt"
+  },
+  {
+    "word": "Cietrzew",
+    "category": "Zwierzęta",
+    "hint": "Taniec"
+  },
+  {
+    "word": "Głuszec",
+    "category": "Zwierzęta",
+    "hint": "Mrok"
+  },
+  {
+    "word": "Krogulec",
+    "category": "Zwierzęta",
+    "hint": "Polowanie"
+  },
+  {
+    "word": "Pustułka",
+    "category": "Zwierzęta",
+    "hint": "Trzepot"
+  },
+  {
+    "word": "Kaniuk",
+    "category": "Zwierzęta",
+    "hint": "Czatowanie"
+  },
+  {
+    "word": "Błotniak",
+    "category": "Zwierzęta",
+    "hint": "Nisko"
+  },
+  {
+    "word": "Bąk",
+    "category": "Zwierzęta",
+    "hint": "Bas"
+  },
+  {
+    "word": "Perkoz",
+    "category": "Zwierzęta",
+    "hint": "Nurek"
+  },
+  {
+    "word": "Kormoran",
+    "category": "Zwierzęta",
+    "hint": "Skrzydła"
+  },
+  {
+    "word": "Brodziec",
+    "category": "Zwierzęta",
+    "hint": "Piasek"
+  },
+  {
+    "word": "Kulik",
+    "category": "Zwierzęta",
+    "hint": "Wygięcie"
+  },
+  {
+    "word": "Czajka",
+    "category": "Zwierzęta",
+    "hint": "Łąka"
+  },
+  {
+    "word": "Agrest",
+    "category": "Jedzenie i Kulinaria",
+    "hint": "Kolce"
+  },
+  {
+    "word": "Porzeczka",
+    "category": "Jedzenie i Kulinaria",
+    "hint": "Kwas"
+  },
+  {
+    "word": "Jagoda",
+    "category": "Jedzenie i Kulinaria",
+    "hint": "Las"
+  },
+  {
+    "word": "Poziomka",
+    "category": "Jedzenie i Kulinaria",
+    "hint": "Polana"
+  },
+  {
+    "word": "Żurawina",
+    "category": "Jedzenie i Kulinaria",
+    "hint": "Moczary"
+  },
+  {
+    "word": "Daktyl",
+    "category": "Jedzenie i Kulinaria",
+    "hint": "Słońce"
+  },
+  {
+    "word": "Figa",
+    "category": "Jedzenie i Kulinaria",
+    "hint": "Śródziemnomorze"
+  },
+  {
+    "word": "Oliwka",
+    "category": "Jedzenie i Kulinaria",
+    "hint": "Grecja"
+  },
+  {
+    "word": "Kapar",
+    "category": "Jedzenie i Kulinaria",
+    "hint": "Ostrość"
+  },
+  {
+    "word": "Kokos",
+    "category": "Jedzenie i Kulinaria",
+    "hint": "Palma"
+  },
+  {
+    "word": "Papaja",
+    "category": "Jedzenie i Kulinaria",
+    "hint": "Miąższ"
+  },
+  {
+    "word": "Limonka",
+    "category": "Jedzenie i Kulinaria",
+    "hint": "Zieloność"
+  },
+  {
+    "word": "Grejpfrut",
+    "category": "Jedzenie i Kulinaria",
+    "hint": "Gorycz"
+  },
+  {
+    "word": "Klementynka",
+    "category": "Jedzenie i Kulinaria",
+    "hint": "Słodycz"
+  },
+  {
+    "word": "Kumkwat",
+    "category": "Jedzenie i Kulinaria",
+    "hint": "Miniatura"
+  },
+  {
+    "word": "Koper",
+    "category": "Jedzenie i Kulinaria",
+    "hint": "Aromat"
+  },
+  {
+    "word": "Pietruszka",
+    "category": "Jedzenie i Kulinaria",
+    "hint": "Korzeń"
+  },
+  {
+    "word": "Szczypiorek",
+    "category": "Jedzenie i Kulinaria",
+    "hint": "Świeżość"
+  },
+  {
+    "word": "Rzeżucha",
+    "category": "Jedzenie i Kulinaria",
+    "hint": "Wielkanoc"
+  },
+  {
+    "word": "Bazylia",
+    "category": "Jedzenie i Kulinaria",
+    "hint": "Włochy"
+  },
+  {
+    "word": "Oregano",
+    "category": "Jedzenie i Kulinaria",
+    "hint": "Zioła"
+  },
+  {
+    "word": "Tymianek",
+    "category": "Jedzenie i Kulinaria",
+    "hint": "Zapach"
+  },
+  {
+    "word": "Rozmaryn",
+    "category": "Jedzenie i Kulinaria",
+    "hint": "Gałązka"
+  },
+  {
+    "word": "Szałwia",
+    "category": "Jedzenie i Kulinaria",
+    "hint": "Zdrowie"
+  },
+  {
+    "word": "Majeranek",
+    "category": "Jedzenie i Kulinaria",
+    "hint": "Tradycja"
+  },
+  {
+    "word": "Lubczyk",
+    "category": "Jedzenie i Kulinaria",
+    "hint": "Uczucie"
+  },
+  {
+    "word": "Diament",
+    "category": "Przedmioty Codzienne i Narzędzia",
+    "hint": "Twardość"
+  },
+  {
+    "word": "Brylant",
+    "category": "Przedmioty Codzienne i Narzędzia",
+    "hint": "Blask"
+  },
+  {
+    "word": "Bursztyn",
+    "category": "Przedmioty Codzienne i Narzędzia",
+    "hint": "Żywica"
+  },
+  {
+    "word": "Kryształ",
+    "category": "Przedmioty Codzienne i Narzędzia",
+    "hint": "Czystość"
+  },
+  {
+    "word": "Rubin",
+    "category": "Przedmioty Codzienne i Narzędzia",
+    "hint": "Czerwień"
+  },
+  {
+    "word": "Szmaragd",
+    "category": "Przedmioty Codzienne i Narzędzia",
+    "hint": "Zieleń"
+  },
+  {
+    "word": "Szafir",
+    "category": "Przedmioty Codzienne i Narzędzia",
+    "hint": "Błękit"
+  },
+  {
+    "word": "Perła",
+    "category": "Przedmioty Codzienne i Narzędzia",
+    "hint": "Małż"
+  },
+  {
+    "word": "Złoto",
+    "category": "Przedmioty Codzienne i Narzędzia",
+    "hint": "Wartość"
+  },
+  {
+    "word": "Srebro",
+    "category": "Przedmioty Codzienne i Narzędzia",
+    "hint": "Połysk"
+  },
+  {
+    "word": "Miedź",
+    "category": "Przedmioty Codzienne i Narzędzia",
+    "hint": "Ruda"
+  },
+  {
+    "word": "Mosiądz",
+    "category": "Przedmioty Codzienne i Narzędzia",
+    "hint": "Stop"
+  },
+  {
+    "word": "Brąz",
+    "category": "Przedmioty Codzienne i Narzędzia",
+    "hint": "Statuetka"
+  },
+  {
+    "word": "Moneta",
+    "category": "Przedmioty Codzienne i Narzędzia",
+    "hint": "Rzut"
+  },
+  {
+    "word": "Banknot",
+    "category": "Przedmioty Codzienne i Narzędzia",
+    "hint": "Papier"
+  },
+  {
+    "word": "Sejf",
+    "category": "Przedmioty Codzienne i Narzędzia",
+    "hint": "Szyfr"
+  },
+  {
+    "word": "Skarbonka",
+    "category": "Przedmioty Codzienne i Narzędzia",
+    "hint": "Oszczędność"
+  },
+  {
+    "word": "Kufer",
+    "category": "Przedmioty Codzienne i Narzędzia",
+    "hint": "Podróż"
+  },
+  {
+    "word": "Brelok",
+    "category": "Przedmioty Codzienne i Narzędzia",
+    "hint": "Pamiątka"
+  },
+  {
+    "word": "Magnes",
+    "category": "Przedmioty Codzienne i Narzędzia",
+    "hint": "Przyciąganie"
+  },
+  {
+    "word": "Flakon",
+    "category": "Przedmioty Codzienne i Narzędzia",
+    "hint": "Aromat"
+  },
+  {
+    "word": "Puzderko",
+    "category": "Przedmioty Codzienne i Narzędzia",
+    "hint": "Schowek"
+  },
+  {
+    "word": "Szkatułka",
+    "category": "Przedmioty Codzienne i Narzędzia",
+    "hint": "Biżuteria"
+  },
+  {
+    "word": "Pustkowie",
+    "category": "Przyroda, Geografia i Kosmos",
+    "hint": "Cisza"
+  },
+  {
+    "word": "Urwisko",
+    "category": "Przyroda, Geografia i Kosmos",
+    "hint": "Krawędź"
+  },
+  {
+    "word": "Przełęcz",
+    "category": "Przyroda, Geografia i Kosmos",
+    "hint": "Przejście"
+  },
+  {
+    "word": "Dolina",
+    "category": "Przyroda, Geografia i Kosmos",
+    "hint": "Spokój"
+  },
+  {
+    "word": "Potok",
+    "category": "Przyroda, Geografia i Kosmos",
+    "hint": "Szmer"
+  },
+  {
+    "word": "Strumień",
+    "category": "Przyroda, Geografia i Kosmos",
+    "hint": "Bystrość"
+  },
+  {
+    "word": "Zmierzch",
+    "category": "Przyroda, Geografia i Kosmos",
+    "hint": "Koniec"
+  },
+  {
+    "word": "Świt",
+    "category": "Przyroda, Geografia i Kosmos",
+    "hint": "Początek"
+  },
+  {
+    "word": "Odwilż",
+    "category": "Przyroda, Geografia i Kosmos",
+    "hint": "Krople"
+  },
+  {
+    "word": "Skwar",
+    "category": "Przyroda, Geografia i Kosmos",
+    "hint": "Żar"
+  },
+  {
+    "word": "Zawieja",
+    "category": "Przyroda, Geografia i Kosmos",
+    "hint": "Wicher"
+  },
+  {
+    "word": "Mżawka",
+    "category": "Przyroda, Geografia i Kosmos",
+    "hint": "Krople"
+  },
+  {
+    "word": "Chmura",
+    "category": "Przyroda, Geografia i Kosmos",
+    "hint": "Kształt"
+  },
+  {
+    "word": "Obłok",
+    "category": "Przyroda, Geografia i Kosmos",
+    "hint": "Lekkość"
+  },
+  {
+    "word": "Kropla",
+    "category": "Przyroda, Geografia i Kosmos",
+    "hint": "Drobiazg"
+  },
+  {
+    "word": "Fala",
+    "category": "Przyroda, Geografia i Kosmos",
+    "hint": "Rytm"
+  },
+  {
+    "word": "Odpływ",
+    "category": "Przyroda, Geografia i Kosmos",
+    "hint": "Piasek"
+  },
+  {
+    "word": "Przypływ",
+    "category": "Przyroda, Geografia i Kosmos",
+    "hint": "Żywioł"
+  },
+  {
+    "word": "Głębia",
+    "category": "Przyroda, Geografia i Kosmos",
+    "hint": "Tajemnica"
+  },
+  {
+    "word": "Otchłań",
+    "category": "Przyroda, Geografia i Kosmos",
+    "hint": "Ciemność"
+  },
+  {
+    "word": "Melodia",
+    "category": "Muzyka i Dźwięk",
+    "hint": "Wspomnienie"
+  },
+  {
+    "word": "Rytm",
+    "category": "Muzyka i Dźwięk",
+    "hint": "Puls"
+  },
+  {
+    "word": "Akord",
+    "category": "Muzyka i Dźwięk",
+    "hint": "Zgodność"
+  },
+  {
+    "word": "Barwa",
+    "category": "Muzyka i Dźwięk",
+    "hint": "Ciepło"
+  },
+  {
+    "word": "Gama",
+    "category": "Muzyka i Dźwięk",
+    "hint": "Skala"
+  },
+  {
+    "word": "Solo",
+    "category": "Muzyka i Dźwięk",
+    "hint": "Samotność"
+  },
+  {
+    "word": "Duet",
+    "category": "Muzyka i Dźwięk",
+    "hint": "Dialog"
+  },
+  {
+    "word": "Chór",
+    "category": "Muzyka i Dźwięk",
+    "hint": "Moc"
+  },
+  {
+    "word": "Refren",
+    "category": "Muzyka i Dźwięk",
+    "hint": "Powrót"
+  },
+  {
+    "word": "Zwrotka",
+    "category": "Muzyka i Dźwięk",
+    "hint": "Opowieść"
+  },
+  {
+    "word": "Ballada",
+    "category": "Muzyka i Dźwięk",
+    "hint": "Nastrój"
+  },
+  {
+    "word": "Płótno",
+    "category": "Muzyka i Dźwięk",
+    "hint": "Biel"
+  },
+  {
+    "word": "Rzeźba",
+    "category": "Muzyka i Dźwięk",
+    "hint": "Kształt"
+  },
+  {
+    "word": "Szkic",
+    "category": "Muzyka i Dźwięk",
+    "hint": "Początek"
+  },
+  {
+    "word": "Witraż",
+    "category": "Muzyka i Dźwięk",
+    "hint": "Światło"
+  },
+  {
+    "word": "Mozaika",
+    "category": "Muzyka i Dźwięk",
+    "hint": "Układ"
+  },
+  {
+    "word": "Śmigłowiec",
+    "category": "Pojazdy i Maszyny",
+    "hint": "Start"
+  },
+  {
+    "word": "Parowóz",
+    "category": "Pojazdy i Maszyny",
+    "hint": "Para"
+  },
+  {
+    "word": "Drezyna",
+    "category": "Pojazdy i Maszyny",
+    "hint": "Wysiłek"
+  },
+  {
+    "word": "Tandem",
+    "category": "Pojazdy i Maszyny",
+    "hint": "Dwoje"
+  },
+  {
+    "word": "Monocykl",
+    "category": "Pojazdy i Maszyny",
+    "hint": "Balans"
+  },
+  {
+    "word": "Ścigacz",
+    "category": "Pojazdy i Maszyny",
+    "hint": "Ryk"
+  },
+  {
+    "word": "Tratwa",
+    "category": "Pojazdy i Maszyny",
+    "hint": "Prąd"
+  },
+  {
+    "word": "Fregata",
+    "category": "Pojazdy i Maszyny",
+    "hint": "Żagle"
+  },
+  {
+    "word": "Gondola",
+    "category": "Pojazdy i Maszyny",
+    "hint": "Wenecja"
+  },
+  {
+    "word": "Karawela",
+    "category": "Pojazdy i Maszyny",
+    "hint": "Odkrycie"
+  },
+  {
+    "word": "Szalupa",
+    "category": "Pojazdy i Maszyny",
+    "hint": "Ratunek"
   }
 ];
 

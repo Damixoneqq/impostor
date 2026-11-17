@@ -24,8 +24,9 @@ Wystarczy otworzyć plik `index.html` w dowolnej przeglądarce internetowej:
   - Wybór zakresu: **Min impostorów** oraz **Max impostorów** (np. od 0 do 2, od 1 do 3 itd.).
   - Możliwość wylosowania **0 impostorów** – wspaniały element psychologiczny, gdy wszyscy są niewinni i nikt o tym nie wie!
   - Gra losuje liczbę zdrajców z wybranego przedziału bez ujawniania jej graczom.
-- **Jednosłowne, subtelne podpowiedzi:**
-  - Każde hasło w bazie posiada **jedno-słowne skojarzenie** (zamiast całych definicji), dające pole do blefowania i domysłów.
+- **Jednosłowne, nieoczywiste podpowiedzi i hasła:**
+  - Wszystkie hasła w bazie to **dokładnie pojedyncze słowa** (bez fraz wieloczłonowych).
+  - Każde hasło posiada **jedno-słowne, subtelne skojarzenie** (luźniejsze, bardziej abstrakcyjne, dające przestrzeń do blefowania i dedukcji, a nie bezpośrednią definicję).
 - **Swobodna dyskusja (bez presji czasu):**
   - Usunięto odliczanie stoperem – ekran informuje o trwającej rundzie, a gracze sami decydują kiedy zakończyć rozmowę i przejść do głosowania.
 - **Kategorie słów:**
