@@ -20,12 +20,14 @@ Wystarczy otworzyć plik `index.html` w dowolnej przeglądarce internetowej:
   - Dynamiczne dodawanie (`+ Dodaj Gracza` lub klawisz `Enter`) i usuwanie graczy (ikona kosza).
   - Automatyczne zapisywanie imion w pamięci przeglądarki (`localStorage`) – po odświeżeniu lub przy kolejnej grze nie trzeba ponownie wpisywać składu ekipy.
   - Szybki przycisk przywracania domyślnych imion.
-- **Bezpieczne losowanie impostorów:**
-  - **Tryb Auto (Domyślny):** Aplikacja automatycznie losuje bezpieczną liczbę impostorów z logicznego zakresu (np. 1 dla 3-4 osób, 1-2 dla 5-9 osób, 2-3 dla 10+ osób) **bez ujawniania graczom, ilu ich jest!**
-  - **Tryb ręczny:** Możliwość sztywnego zablokowania liczby impostorów (np. dokładnie 1 lub dokładnie 2).
-- **Podpowiedzi dla Impostorów:**
-  - Opcje: *Losowo (50% szans)*, *Zawsze*, *Nigdy*.
-  - Impostor może wylosować podpowiedź kontekstową (np. kategoria lub słowo pomocnicze), która ułatwia mu blefowanie, lub nie otrzymać żadnej podpowiedzi.
+- **Elastyczne losowanie impostorów (od 0 do liczby graczy):**
+  - Wybór zakresu: **Min impostorów** oraz **Max impostorów** (np. od 0 do 2, od 1 do 3 itd.).
+  - Możliwość wylosowania **0 impostorów** – wspaniały element psychologiczny, gdy wszyscy są niewinni i nikt o tym nie wie!
+  - Gra losuje liczbę zdrajców z wybranego przedziału bez ujawniania jej graczom.
+- **Jednosłowne, subtelne podpowiedzi:**
+  - Każde hasło w bazie posiada **jedno-słowne skojarzenie** (zamiast całych definicji), dające pole do blefowania i domysłów.
+- **Swobodna dyskusja (bez presji czasu):**
+  - Usunięto odliczanie stoperem – ekran informuje o trwającej rundzie, a gracze sami decydują kiedy zakończyć rozmowę i przejść do głosowania.
 - **Kategorie słów:**
   - Filtrowanie według wybranej kategorii lub pula ze wszystkich dostępnych.
 

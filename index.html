@@ -124,14 +124,28 @@
                 <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"></path>
                 <circle cx="12" cy="12" r="3"></circle>
               </svg>
-              Liczba Impostorów
+              Zakres Losowania Impostorów
             </span>
-            <p class="option-desc">Automatyczne losowanie wybiera bezpieczną liczbę zdrajców bez ujawniania jej graczom.</p>
-            <div id="impostors-segmented" class="segmented-control">
-              <button type="button" class="segmented-btn active" data-val="auto">Auto (Losowo)</button>
-              <button type="button" class="segmented-btn" data-val="1">Dokładnie 1</button>
-              <button type="button" class="segmented-btn" data-val="2">Dokładnie 2</button>
+            <p class="option-desc">Określ przedział, z którego gra losuje liczbę zdrajców (od 0 do liczby graczy):</p>
+            <div class="steppers-row">
+              <div class="stepper-box">
+                <span class="stepper-label">Min impostorów</span>
+                <div class="stepper-control">
+                  <button type="button" id="btn-min-dec" class="btn-stepper" aria-label="Zmniejsz minimum">−</button>
+                  <span id="val-min-impostors" class="stepper-value">1</span>
+                  <button type="button" id="btn-min-inc" class="btn-stepper" aria-label="Zwiększ minimum">+</button>
+                </div>
+              </div>
+              <div class="stepper-box">
+                <span class="stepper-label">Max impostorów</span>
+                <div class="stepper-control">
+                  <button type="button" id="btn-max-dec" class="btn-stepper" aria-label="Zmniejsz maksimum">−</button>
+                  <span id="val-max-impostors" class="stepper-value">2</span>
+                  <button type="button" id="btn-max-inc" class="btn-stepper" aria-label="Zwiększ maksimum">+</button>
+                </div>
+              </div>
             </div>
+            <div id="range-summary-badge" class="range-summary-badge">Losowanie od 1 do 2 impostorów</div>
           </div>
 
           <!-- Hints option -->
@@ -283,20 +297,14 @@
           <span>Pierwsze pytanie zadaje: <strong id="first-player-name" class="first-player-name">Kasia</strong></span>
         </div>
 
-        <!-- DISCUSSION TIMER -->
-        <div class="timer-container">
-          <div id="timer-display" class="timer-display">03:00</div>
-          <div class="timer-controls">
-            <button id="btn-timer-toggle" type="button" class="btn-timer primary">
-              Start
-            </button>
-            <button id="btn-timer-reset" type="button" class="btn-timer">
-              Reset
-            </button>
-            <button id="btn-timer-add-minute" type="button" class="btn-timer">
-              +1 Minuta
-            </button>
+        <!-- ACTIVE ROUND STATUS (NO TIMER) -->
+        <div class="active-round-banner">
+          <div class="pulse-indicator">
+            <span class="pulse-dot"></span>
+            <span>RUNDA W TOKU</span>
           </div>
+          <h2 class="discussion-title">Czas na Rozmowę</h2>
+          <p class="discussion-desc">Grajcie we własnym tempie bez limitu czasu. Zadawajcie pytania, analizujcie odpowiedzi, a gdy skończycie — zagłosujcie i sprawdźcie wyniki!</p>
         </div>
 
         <!-- RULES SUMMARY CARD -->

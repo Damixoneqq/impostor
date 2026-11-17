@@ -65,7 +65,6 @@
       try {
         this.init();
         if (!this.ctx) return;
-        const now = this.ctx.currentTime;
         [523.25, 659.25, 783.99, 1046.5].forEach((freq, i) => {
           setTimeout(() => this.playTone(freq, 'triangle', 0.25, 0.12), i * 60);
         });
@@ -79,21 +78,6 @@
         if (!this.ctx) return;
         this.playTone(180, 'sawtooth', 0.4, 0.2);
         setTimeout(() => this.playTone(140, 'sawtooth', 0.5, 0.25), 180);
-      } catch (e) {}
-    }
-
-    playTick() {
-      this.playTone(900, 'sine', 0.04, 0.08);
-    }
-
-    playTimeUp() {
-      if (this.muted) return;
-      try {
-        this.init();
-        if (!this.ctx) return;
-        [440, 554.37, 659.25, 880].forEach((freq, i) => {
-          setTimeout(() => this.playTone(freq, 'square', 0.35, 0.15), i * 120);
-        });
       } catch (e) {}
     }
   }
@@ -114,7 +98,8 @@
   // --- GAME STATE ---
   const state = {
     players: [],
-    impostorSetting: 'auto', // 'auto', '1', '2', '3'
+    minImpostors: 1,
+    maxImpostors: 2,
     hintSetting: 'random',   // 'random', 'always', 'never'
     categorySetting: 'all',  // 'all' or specific category
     
@@ -122,13 +107,7 @@
     activeWordData: null,
     assignedRoles: [], // Array of { name, isImpostor, hasHint, hintText }
     currentPlayerIndex: 0,
-    firstSpeaker: '',
-    
-    // Timer variables
-    timerInterval: null,
-    timerSecondsLeft: 180,
-    timerDuration: 180,
-    isTimerRunning: false
+    firstSpeaker: ''
   };
 
   const sound = new SoundEngine();
@@ -156,7 +135,16 @@
     btnAddPlayer: document.getElementById('btn-add-player'),
     btnResetPlayers: document.getElementById('btn-reset-players'),
     btnStartGame: document.getElementById('btn-start-game'),
-    impostorsSegmented: document.getElementById('impostors-segmented'),
+    
+    // Steppers for Impostor range
+    btnMinDec: document.getElementById('btn-min-dec'),
+    btnMinInc: document.getElementById('btn-min-inc'),
+    valMinImpostors: document.getElementById('val-min-impostors'),
+    btnMaxDec: document.getElementById('btn-max-dec'),
+    btnMaxInc: document.getElementById('btn-max-inc'),
+    valMaxImpostors: document.getElementById('val-max-impostors'),
+    rangeSummaryBadge: document.getElementById('range-summary-badge'),
+
     hintsSegmented: document.getElementById('hints-segmented'),
     categorySelect: document.getElementById('category-select'),
     totalWordsCountEl: document.getElementById('total-words-count'),
@@ -182,10 +170,6 @@
 
     // Discussion Screen
     firstPlayerName: document.getElementById('first-player-name'),
-    timerDisplay: document.getElementById('timer-display'),
-    btnTimerToggle: document.getElementById('btn-timer-toggle'),
-    btnTimerReset: document.getElementById('btn-timer-reset'),
-    btnTimerAddMinute: document.getElementById('btn-timer-add-minute'),
     btnShowResults: document.getElementById('btn-show-results'),
     resultsCard: document.getElementById('results-card'),
     resultsSecretWord: document.getElementById('results-secret-word'),
@@ -200,6 +184,7 @@
     loadSettings();
     populateCategoryDropdown();
     renderPlayersList();
+    updateRangeUI();
     bindEvents();
     updateMuteUI();
   }
@@ -216,8 +201,15 @@
         state.players = [...DEFAULT_PLAYERS];
       }
 
-      const savedImpostorOpt = localStorage.getItem('impostor_mode');
-      if (savedImpostorOpt) state.impostorSetting = savedImpostorOpt;
+      const savedMin = parseInt(localStorage.getItem('impostor_min'), 10);
+      if (!isNaN(savedMin) && savedMin >= 0) {
+        state.minImpostors = savedMin;
+      }
+
+      const savedMax = parseInt(localStorage.getItem('impostor_max'), 10);
+      if (!isNaN(savedMax) && savedMax >= state.minImpostors) {
+        state.maxImpostors = savedMax;
+      }
 
       const savedHintOpt = localStorage.getItem('impostor_hints');
       if (savedHintOpt) state.hintSetting = savedHintOpt;
@@ -225,14 +217,20 @@
       state.players = [...DEFAULT_PLAYERS];
     }
 
-    // Sync segmented controls
-    syncSegmentedUI(dom.impostorsSegmented, state.impostorSetting);
+    validateAndClampRange();
     syncSegmentedUI(dom.hintsSegmented, state.hintSetting);
   }
 
   function savePlayers() {
     try {
       localStorage.setItem('impostor_players', JSON.stringify(state.players));
+    } catch (e) {}
+  }
+
+  function saveRangeSettings() {
+    try {
+      localStorage.setItem('impostor_min', state.minImpostors);
+      localStorage.setItem('impostor_max', state.maxImpostors);
     } catch (e) {}
   }
 
@@ -248,6 +246,62 @@
     });
   }
 
+  // --- RANGE ADJUSTMENT LOGIC ---
+  function validateAndClampRange() {
+    const total = state.players.length;
+    if (state.minImpostors < 0) state.minImpostors = 0;
+    if (state.minImpostors > total) state.minImpostors = total;
+    if (state.maxImpostors < state.minImpostors) state.maxImpostors = state.minImpostors;
+    if (state.maxImpostors > total) state.maxImpostors = total;
+  }
+
+  function updateRangeUI() {
+    validateAndClampRange();
+    if (dom.valMinImpostors) dom.valMinImpostors.textContent = state.minImpostors;
+    if (dom.valMaxImpostors) dom.valMaxImpostors.textContent = state.maxImpostors;
+
+    const total = state.players.length;
+    if (dom.btnMinDec) dom.btnMinDec.disabled = state.minImpostors <= 0;
+    if (dom.btnMinInc) dom.btnMinInc.disabled = state.minImpostors >= state.maxImpostors;
+    if (dom.btnMaxDec) dom.btnMaxDec.disabled = state.maxImpostors <= state.minImpostors;
+    if (dom.btnMaxInc) dom.btnMaxInc.disabled = state.maxImpostors >= total;
+
+    if (dom.rangeSummaryBadge) {
+      if (state.minImpostors === state.maxImpostors) {
+        if (state.minImpostors === 0) {
+          dom.rangeSummaryBadge.textContent = 'Brak impostorów (dokładnie 0)';
+        } else {
+          dom.rangeSummaryBadge.textContent = `Dokładnie ${state.minImpostors} ${state.minImpostors === 1 ? 'impostor' : 'impostorów'}`;
+        }
+      } else {
+        dom.rangeSummaryBadge.textContent = `Losowanie od ${state.minImpostors} do ${state.maxImpostors} impostorów`;
+      }
+    }
+  }
+
+  function adjustMin(delta) {
+    sound.playClick();
+    Haptics.tap();
+    const nextVal = state.minImpostors + delta;
+    if (nextVal >= 0 && nextVal <= state.maxImpostors) {
+      state.minImpostors = nextVal;
+      saveRangeSettings();
+      updateRangeUI();
+    }
+  }
+
+  function adjustMax(delta) {
+    sound.playClick();
+    Haptics.tap();
+    const nextVal = state.maxImpostors + delta;
+    const total = state.players.length;
+    if (nextVal >= state.minImpostors && nextVal <= total) {
+      state.maxImpostors = nextVal;
+      saveRangeSettings();
+      updateRangeUI();
+    }
+  }
+
   // --- POPULATE CATEGORIES ---
   function populateCategoryDropdown() {
     if (!dom.categorySelect || typeof IMPOSTOR_WORDS === 'undefined') return;
@@ -259,7 +313,6 @@
 
     const sortedCats = Array.from(categories).sort((a, b) => a.localeCompare(b, 'pl'));
     
-    // Count label
     if (dom.totalWordsCountEl) {
       dom.totalWordsCountEl.textContent = `${IMPOSTOR_WORDS.length} haseł`;
     }
@@ -348,6 +401,7 @@
 
     dom.playersCountBadge.textContent = `${state.players.length} graczy`;
     dom.btnAddPlayer.disabled = state.players.length >= 16;
+    updateRangeUI();
   }
 
   function addPlayer() {
@@ -358,7 +412,6 @@
     savePlayers();
     renderPlayersList();
 
-    // Focus newly added player input
     const inputs = dom.playersList.querySelectorAll('.player-input');
     const lastInput = inputs[inputs.length - 1];
     if (lastInput) {
@@ -384,33 +437,9 @@
   }
 
   // --- GAME LOGIC & ROLE CALCULATOR ---
-  function calculateSafeImpostorCount(totalPlayers) {
-    if (state.impostorSetting !== 'auto') {
-      const fixed = parseInt(state.impostorSetting, 10);
-      // Ensure fixed count is strictly less than half total players
-      const maxAllowed = Math.max(1, Math.floor((totalPlayers - 1) / 2));
-      return Math.min(fixed, maxAllowed);
-    }
-
-    // Automatic safe draw logic:
-    // 3 - 4 players: always 1 impostor
-    // 5 - 6 players: 1 or 2 impostors (e.g. 60% chance for 1, 40% chance for 2)
-    // 7 - 9 players: 1 or 2 impostors (e.g. 45% for 1, 55% for 2)
-    // 10+ players: 2 or 3 impostors (e.g. 65% for 2, 35% for 3)
-    if (totalPlayers <= 4) {
-      return 1;
-    } else if (totalPlayers <= 6) {
-      return Math.random() < 0.5 ? 1 : 2;
-    } else if (totalPlayers <= 9) {
-      return Math.random() < 0.4 ? 1 : 2;
-    } else {
-      return Math.random() < 0.65 ? 2 : 3;
-    }
-  }
-
   function selectRandomWord() {
     if (typeof IMPOSTOR_WORDS === 'undefined' || !IMPOSTOR_WORDS.length) {
-      return { word: 'Komputer', category: 'Technologia', hint: 'Sprzęt elektroniczny' };
+      return { word: 'Komputer', category: 'Technologia', hint: 'Klawiatura' };
     }
 
     let pool = IMPOSTOR_WORDS;
@@ -454,12 +483,14 @@
     // Pick secret word
     state.activeWordData = selectRandomWord();
 
-    // Determine number of impostors
-    const impostorCount = calculateSafeImpostorCount(total);
+    // Determine number of impostors randomly from [minImpostors, maxImpostors]
+    validateAndClampRange();
+    const min = state.minImpostors;
+    const max = state.maxImpostors;
+    const impostorCount = Math.floor(Math.random() * (max - min + 1)) + min;
 
     // Randomly pick unique indices for impostors
     const indices = Array.from({ length: total }, (_, i) => i);
-    // Shuffle indices (Fisher-Yates)
     for (let i = indices.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [indices[i], indices[j]] = [indices[j], indices[i]];
@@ -475,11 +506,11 @@
         name,
         isImpostor: isImp,
         hasHint: hasHint,
-        hintText: hasHint ? (state.activeWordData.hint || state.activeWordData.category) : ''
+        hintText: hasHint ? state.activeWordData.hint : ''
       };
     });
 
-    // Random starting speaker for discussion later
+    // Random starting speaker for discussion
     const randomSpeakerIndex = Math.floor(Math.random() * total);
     state.firstSpeaker = finalPlayers[randomSpeakerIndex];
 
@@ -522,11 +553,11 @@
 
       if (playerRole.hasHint) {
         dom.roleHintText.innerHTML = `
-          <div class="impostor-hint-title">Twoja podpowiedź:</div>
+          <div class="impostor-hint-title">Twoja podpowiedź (1 słowo):</div>
           <div class="impostor-hint-text">"${playerRole.hintText}"</div>
           <div class="category-pill mt-2">Kategoria: ${state.activeWordData.category}</div>
         `;
-        dom.roleInstruction.textContent = 'Nie znasz dokładnego hasła, ale masz podpowiedź! Używaj sprytnych odpowiedzi i nie daj się złapać.';
+        dom.roleInstruction.textContent = 'Nie znasz dokładnego hasła, ale masz słowo pomocnicze! Użyj go, by blefować i nie dać się zdemaskować.';
       } else {
         dom.roleHintText.innerHTML = `
           <div class="impostor-no-hint">NIE MASZ PODPOWIEDZI!</div>
@@ -572,7 +603,7 @@
     }
   }
 
-  // --- DISCUSSION & TIMER ---
+  // --- DISCUSSION (NO TIMER, PLAY AT OWN PACE) ---
   function showDiscussionScreen() {
     sound.playRevealInnocent();
     Haptics.success();
@@ -581,87 +612,7 @@
     dom.resultsCard.classList.remove('active');
     dom.btnShowResults.classList.remove('hidden');
 
-    // Reset timer to 3 minutes (180s)
-    resetTimer(180);
-
     switchScreen('discussion');
-  }
-
-  function formatTime(totalSeconds) {
-    const mins = Math.floor(totalSeconds / 60);
-    const secs = totalSeconds % 60;
-    return `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
-  }
-
-  function updateTimerDisplay() {
-    dom.timerDisplay.textContent = formatTime(state.timerSecondsLeft);
-    if (state.timerSecondsLeft <= 10 && state.timerSecondsLeft > 0) {
-      dom.timerDisplay.classList.add('timer-warning');
-    } else {
-      dom.timerDisplay.classList.remove('timer-warning');
-    }
-  }
-
-  function toggleTimer() {
-    sound.playClick();
-    Haptics.tap();
-
-    if (state.isTimerRunning) {
-      pauseTimer();
-    } else {
-      startTimer();
-    }
-  }
-
-  function startTimer() {
-    if (state.timerSecondsLeft <= 0) return;
-    state.isTimerRunning = true;
-    dom.btnTimerToggle.textContent = 'Pauza';
-    dom.btnTimerToggle.classList.remove('primary');
-
-    clearInterval(state.timerInterval);
-    state.timerInterval = setInterval(() => {
-      state.timerSecondsLeft--;
-      updateTimerDisplay();
-
-      if (state.timerSecondsLeft <= 10 && state.timerSecondsLeft > 0) {
-        sound.playTick();
-        Haptics.tap();
-      }
-
-      if (state.timerSecondsLeft <= 0) {
-        clearInterval(state.timerInterval);
-        state.isTimerRunning = false;
-        dom.btnTimerToggle.textContent = 'Start';
-        dom.btnTimerToggle.classList.add('primary');
-        sound.playTimeUp();
-        Haptics.warning();
-      }
-    }, 1000);
-  }
-
-  function pauseTimer() {
-    state.isTimerRunning = false;
-    clearInterval(state.timerInterval);
-    dom.btnTimerToggle.textContent = 'Wznów';
-    dom.btnTimerToggle.classList.add('primary');
-  }
-
-  function resetTimer(seconds = 180) {
-    clearInterval(state.timerInterval);
-    state.isTimerRunning = false;
-    state.timerSecondsLeft = seconds;
-    state.timerDuration = seconds;
-    dom.btnTimerToggle.textContent = 'Start';
-    dom.btnTimerToggle.classList.add('primary');
-    updateTimerDisplay();
-  }
-
-  function addMinuteToTimer() {
-    sound.playClick();
-    Haptics.tap();
-    state.timerSecondsLeft += 60;
-    updateTimerDisplay();
   }
 
   // --- RESULTS REVEAL ---
@@ -669,17 +620,31 @@
     sound.playClick();
     Haptics.tap();
 
-    const confirmed = confirm('Czy na pewno zakończyliście dyskusję i głosowanie? Kliknięcie odsłoni tożsamość wszystkich impostorów oraz sekretne hasło.');
+    const confirmed = confirm('Czy na pewno zakończyliście dyskusję i głosowanie? Kliknięcie odsłoni tożsamość wszystkich graczy oraz sekretne hasło.');
     if (!confirmed) return;
 
-    pauseTimer();
     sound.playRevealImpostor();
     Haptics.warning();
 
     dom.resultsSecretWord.textContent = state.activeWordData.word.toUpperCase();
     dom.resultsCategory.textContent = `Kategoria: ${state.activeWordData.category}`;
 
+    const impostors = state.assignedRoles.filter(p => p.isImpostor);
     dom.resultsRolesList.innerHTML = '';
+
+    if (impostors.length === 0) {
+      const zeroBanner = document.createElement('div');
+      zeroBanner.className = 'result-role-item';
+      zeroBanner.style.gridColumn = '1 / -1';
+      zeroBanner.style.borderColor = 'rgba(6, 182, 212, 0.4)';
+      zeroBanner.style.background = 'rgba(6, 182, 212, 0.08)';
+      zeroBanner.innerHTML = `
+        <span class="result-name" style="color: var(--neon-cyan);">🤯 NIKT NIE BYŁ IMPOSTOREM!</span>
+        <span class="result-tag tag-innocent">0 Impostorów w rundzie</span>
+      `;
+      dom.resultsRolesList.appendChild(zeroBanner);
+    }
+
     state.assignedRoles.forEach(p => {
       const item = document.createElement('div');
       item.className = `result-role-item ${p.isImpostor ? 'impostor-item' : ''}`;
@@ -691,7 +656,7 @@
       const tagEl = document.createElement('span');
       if (p.isImpostor) {
         tagEl.className = 'result-tag tag-impostor';
-        tagEl.textContent = p.hasHint ? 'Impostor (z podpowiedzią)' : 'Impostor (bez podpowiedzi)';
+        tagEl.textContent = p.hasHint ? `Impostor (podpowiedź: ${p.hintText})` : 'Impostor (bez podpowiedzi)';
       } else {
         tagEl.className = 'result-tag tag-innocent';
         tagEl.textContent = 'Niewinny';
@@ -786,16 +751,11 @@
     dom.btnResetPlayers.addEventListener('click', resetPlayers);
     dom.btnStartGame.addEventListener('click', startNewGame);
 
-    // Segmented Controls (Impostors count)
-    dom.impostorsSegmented.addEventListener('click', (e) => {
-      const btn = e.target.closest('.segmented-btn');
-      if (!btn) return;
-      sound.playClick();
-      Haptics.tap();
-      state.impostorSetting = btn.dataset.val;
-      localStorage.setItem('impostor_mode', state.impostorSetting);
-      syncSegmentedUI(dom.impostorsSegmented, state.impostorSetting);
-    });
+    // Range Steppers for Impostors
+    dom.btnMinDec.addEventListener('click', () => adjustMin(-1));
+    dom.btnMinInc.addEventListener('click', () => adjustMin(1));
+    dom.btnMaxDec.addEventListener('click', () => adjustMax(-1));
+    dom.btnMaxInc.addEventListener('click', () => adjustMax(1));
 
     // Segmented Controls (Hints)
     dom.hintsSegmented.addEventListener('click', (e) => {
@@ -812,21 +772,14 @@
     dom.btnRevealRole.addEventListener('click', revealCurrentPlayerRole);
     dom.btnHideAndPass.addEventListener('click', hideAndPassNext);
 
-    // Discussion & Timer Actions
-    dom.btnTimerToggle.addEventListener('click', toggleTimer);
-    dom.btnTimerReset.addEventListener('click', () => resetTimer(180));
-    dom.btnTimerAddMinute.addEventListener('click', addMinuteToTimer);
+    // Discussion Actions
     dom.btnShowResults.addEventListener('click', showResults);
 
     // Post-Game Actions
-    dom.btnPlayAgainSame.addEventListener('click', () => {
-      pauseTimer();
-      startNewGame();
-    });
+    dom.btnPlayAgainSame.addEventListener('click', startNewGame);
 
     dom.btnEditGame.addEventListener('click', () => {
       sound.playClick();
-      pauseTimer();
       switchScreen('setup');
     });
   }
