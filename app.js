@@ -162,7 +162,6 @@
     roleWordSection: document.getElementById('role-word-section'),
     roleWordLabel: document.getElementById('role-word-label'),
     roleSecretWord: document.getElementById('role-secret-word'),
-    roleCategoryPill: document.getElementById('role-category-pill'),
     roleHintSection: document.getElementById('role-hint-section'),
     roleHintText: document.getElementById('role-hint-text'),
     roleInstruction: document.getElementById('role-instruction'),
@@ -173,7 +172,6 @@
     btnShowResults: document.getElementById('btn-show-results'),
     resultsCard: document.getElementById('results-card'),
     resultsSecretWord: document.getElementById('results-secret-word'),
-    resultsCategory: document.getElementById('results-category'),
     resultsRolesList: document.getElementById('results-roles-list'),
     btnPlayAgainSame: document.getElementById('btn-play-again-same'),
     btnEditGame: document.getElementById('btn-edit-game')
@@ -555,13 +553,11 @@
         dom.roleHintText.innerHTML = `
           <div class="impostor-hint-title">Twoja podpowiedź (1 słowo):</div>
           <div class="impostor-hint-text">"${playerRole.hintText}"</div>
-          <div class="category-pill mt-2">Kategoria: ${state.activeWordData.category}</div>
         `;
         dom.roleInstruction.textContent = 'Nie znasz dokładnego hasła, ale masz słowo pomocnicze! Użyj go, by blefować i nie dać się zdemaskować.';
       } else {
         dom.roleHintText.innerHTML = `
           <div class="impostor-no-hint">NIE MASZ PODPOWIEDZI!</div>
-          <div class="category-pill mt-2">Kategoria: Nieznana</div>
         `;
         dom.roleInstruction.textContent = 'Nie znasz hasła ani podpowiedzi! Uważnie słuchaj innych graczy, blefuj i udawaj, że doskonale wiesz, o czym mowa.';
       }
@@ -578,7 +574,6 @@
 
       dom.roleWordLabel.textContent = 'TWOJE SEKRETNE SŁOWO:';
       dom.roleSecretWord.textContent = state.activeWordData.word.toUpperCase();
-      dom.roleCategoryPill.textContent = `Kategoria: ${state.activeWordData.category}`;
       dom.roleInstruction.textContent = 'Wszyscy pozostali niewinni gracze znają to samo hasło. Odpowiadaj ostrożnie, aby nie ułatwić impostorowi odgadnięcia słowa!';
     }
 
@@ -627,7 +622,6 @@
     Haptics.warning();
 
     dom.resultsSecretWord.textContent = state.activeWordData.word.toUpperCase();
-    dom.resultsCategory.textContent = `Kategoria: ${state.activeWordData.category}`;
 
     const impostors = state.assignedRoles.filter(p => p.isImpostor);
     dom.resultsRolesList.innerHTML = '';
