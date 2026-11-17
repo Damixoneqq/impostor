@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#07090e">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="description" content="Nowoczesna aplikacja webowa do gry imprezowej Impostor (kalkulator ról / master screen pass-and-play) z bazą 1000+ słów.">
+  <title>IMPOSTOR - Gra Imprezowa | Pass & Play</title>
+  
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23a855f7'><path d='M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z'/><circle cx='9' cy='10' r='1.5'/><circle cx='15' cy='10' r='1.5'/><path d='M8 15s1.5 2 4 2 4-2 4-2'/></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- APP HEADER / NAV -->
+    <header class="app-header">
+      <div class="brand" onclick="location.reload()">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 12h20"></path>
+            <path d="M20 12v8H4v-8"></path>
+            <path d="m4 12 8-8 8 8"></path>
+            <circle cx="12" cy="13" r="2"></circle>
+          </svg>
+        </div>
+        <div style="display: flex; flex-direction: column;">
+          <span class="brand-title">IMPOSTOR</span>
+        </div>
+        <span class="brand-badge">PASS & PLAY</span>
+      </div>
+
+      <div class="header-actions">
+        <button id="btn-rules" class="btn-icon" title="Zasady gry" aria-label="Zasady gry">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+          </svg>
+        </button>
+
+        <button id="btn-mute" class="btn-icon active" title="Dźwięki włączone" aria-label="Dźwięk">
+          <span id="icon-mute">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+            </svg>
+          </span>
+        </button>
+
+        <button id="btn-fullscreen" class="btn-icon" title="Pełny ekran" aria-label="Pełny ekran">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- ====================================================================
+         SCREEN 1: SETUP (KONFIGURACJA GRY)
+         ==================================================================== -->
+    <main id="screen-setup" class="screen active">
+      <div class="hero-banner">
+        <h1 class="hero-title">Kalkulator Ról <span>Impostor</span></h1>
+        <p class="hero-desc">Wpisz graczy, uruchom losowanie i przekaż telefon z rąk do rąk. Bez rejestracji, bez internetu, z bazą ponad 1000 polskich haseł!</p>
+      </div>
+
+      <!-- PLAYERS CONFIG CARD -->
+      <section class="card">
+        <div class="section-header">
+          <h2 class="section-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--neon-cyan)">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+            Lista Graczy
+          </h2>
+          <span id="players-count-badge" class="counter-badge">5 graczy</span>
+        </div>
+
+        <div id="players-list" class="players-list">
+          <!-- Dynamic Player inputs inserted here by app.js -->
+        </div>
+
+        <div class="player-actions-row">
+          <button id="btn-add-player" type="button" class="btn-secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+            Dodaj Gracza
+          </button>
+          <button id="btn-reset-players" type="button" class="btn-secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+              <path d="M3 3v5h5"></path>
+            </svg>
+            Domyślne imiona
+          </button>
+        </div>
+      </section>
+
+      <!-- GAME SETTINGS CARD -->
+      <section class="card">
+        <div class="section-header">
+          <h2 class="section-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--neon-purple)">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+            </svg>
+            Ustawienia Rozgrywki
+          </h2>
+          <span id="total-words-count" class="counter-badge">1026 haseł</span>
+        </div>
+
+        <div class="options-grid">
+          <!-- Impostor count option -->
+          <div class="option-box">
+            <span class="option-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--neon-red)">
+                <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+              Liczba Impostorów
+            </span>
+            <p class="option-desc">Automatyczne losowanie wybiera bezpieczną liczbę zdrajców bez ujawniania jej graczom.</p>
+            <div id="impostors-segmented" class="segmented-control">
+              <button type="button" class="segmented-btn active" data-val="auto">Auto (Losowo)</button>
+              <button type="button" class="segmented-btn" data-val="1">Dokładnie 1</button>
+              <button type="button" class="segmented-btn" data-val="2">Dokładnie 2</button>
+            </div>
+          </div>
+
+          <!-- Hints option -->
+          <div class="option-box">
+            <span class="option-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--neon-amber)">
+                <path d="M9 18h6"></path>
+                <path d="M10 22h4"></path>
+                <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"></path>
+              </svg>
+              Podpowiedź dla Impostora
+            </span>
+            <p class="option-desc">Impostor może otrzymać słowo pomocnicze lub kategorię, ułatwiającą blefowanie.</p>
+            <div id="hints-segmented" class="segmented-control">
+              <button type="button" class="segmented-btn active" data-val="random">Losowo (50%)</button>
+              <button type="button" class="segmented-btn" data-val="always">Zawsze</button>
+              <button type="button" class="segmented-btn" data-val="never">Nigdy</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category filter -->
+        <div style="margin-top: 16px;">
+          <label for="category-select" class="option-title" style="margin-bottom: 8px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--neon-cyan)">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+            Kategoria Słów
+          </label>
+          <select id="category-select" style="width: 100%; background: rgba(0,0,0,0.4); border: 1px solid var(--border-subtle); color: var(--text-main); padding: 12px 14px; border-radius: var(--radius-md); font-size: 0.95rem; outline: none; cursor: pointer;">
+            <!-- Categories injected dynamically -->
+          </select>
+        </div>
+      </section>
+
+      <!-- START BUTTON -->
+      <div class="start-container">
+        <button id="btn-start-game" type="button" class="btn-primary-neon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+          Rozpocznij Grę
+        </button>
+      </div>
+    </main>
+
+    <!-- ====================================================================
+         SCREEN 2: PASS & PLAY PRIVACY SCREEN
+         ==================================================================== -->
+    <section id="screen-pass" class="screen">
+      <div class="pass-container">
+        <!-- Progress bar -->
+        <div class="player-progress-bar">
+          <div id="pass-progress-bar" class="player-progress-fill"></div>
+        </div>
+
+        <div id="pass-progress-text" class="counter-badge" style="margin-bottom: 20px;">
+          Gracz 1 z 5
+        </div>
+
+        <div class="pass-avatar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </div>
+
+        <div class="pass-subtext">Przekaż urządzenie dla:</div>
+        <h2 id="pass-player-name" class="pass-player-name">Tomek</h2>
+
+        <div class="privacy-notice">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="8" x2="12" y2="12"></line>
+            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+          </svg>
+          Upewnij się, że nikt inny nie patrzy na ekran!
+        </div>
+
+        <button id="btn-reveal-role" type="button" class="btn-reveal">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+            <circle cx="12" cy="12" r="3"></circle>
+          </svg>
+          Odkryj Swoją Rolę
+        </button>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SCREEN 3: SECRET ROLE REVEAL
+         ==================================================================== -->
+    <section id="screen-reveal" class="screen">
+      <div class="pass-container" style="justify-content: flex-start; padding-top: 20px;">
+        <div class="role-card-wrapper">
+          <div id="role-card" class="role-card role-innocent">
+            <div id="role-badge" class="role-badge">🛡️ STATUS: NIEWINNY</div>
+            <h2 id="role-title" class="role-title">ZNASZ HASŁO!</h2>
+
+            <!-- Word section (Innocent players) -->
+            <div id="role-word-section" class="word-box">
+              <div id="role-word-label" class="word-label">TWOJE SEKRETNE SŁOWO:</div>
+              <div id="role-secret-word" class="secret-word">DELFIN</div>
+              <div id="role-category-pill" class="category-pill">Kategoria: Zwierzęta</div>
+            </div>
+
+            <!-- Hint section (Impostor) -->
+            <div id="role-hint-section" class="impostor-hint-box hidden">
+              <div id="role-hint-text"></div>
+            </div>
+
+            <p id="role-instruction" class="role-instruction">
+              Wszyscy pozostali niewinni gracze znają to samo hasło. Odpowiadaj ostrożnie, aby nie ułatwić impostorowi odgadnięcia słowa!
+            </p>
+
+            <button id="btn-hide-and-pass" type="button" class="btn-hide-and-pass">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+              Ukryj i Przekaż Dalej
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SCREEN 4: DISCUSSION & RESULTS
+         ==================================================================== -->
+    <section id="screen-discussion" class="screen">
+      <div class="card" style="text-align: center; padding: 28px 20px;">
+        <div class="discussion-header">
+          <div class="badge-all-set">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            Wszyscy gracze poznali role!
+          </div>
+          <h2 class="discussion-title">Czas na Konfrontację</h2>
+        </div>
+
+        <div class="first-player-callout">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--neon-purple)">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+          </svg>
+          <span>Pierwsze pytanie zadaje: <strong id="first-player-name" class="first-player-name">Kasia</strong></span>
+        </div>
+
+        <!-- DISCUSSION TIMER -->
+        <div class="timer-container">
+          <div id="timer-display" class="timer-display">03:00</div>
+          <div class="timer-controls">
+            <button id="btn-timer-toggle" type="button" class="btn-timer primary">
+              Start
+            </button>
+            <button id="btn-timer-reset" type="button" class="btn-timer">
+              Reset
+            </button>
+            <button id="btn-timer-add-minute" type="button" class="btn-timer">
+              +1 Minuta
+            </button>
+          </div>
+        </div>
+
+        <!-- RULES SUMMARY CARD -->
+        <div class="rules-hint-card">
+          <div class="rules-hint-title">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+            Zasady Dyskusji i Głosowania
+          </div>
+          <ul class="rules-hint-list">
+            <li>Gracze po kolei zadają sobie jedno pytanie powiązane z hasłem.</li>
+            <li>Odpowiedzi powinny być sprytne: nie zbyt proste, by nie zdradzić hasła impostorowi, ale wystarczające, by udowodnić swoją niewinność!</li>
+            <li>Po upływie czasu liczycie do 3 i jednocześnie wskazujecie podejrzanego palcem!</li>
+            <li>Jeśli zdemaskowany Impostor odgadnie sekretne hasło – wygrywa!</li>
+          </ul>
+        </div>
+
+        <button id="btn-show-results" type="button" class="btn-secondary" style="margin: 0 auto; width: 100%; max-width: 400px; padding: 14px 20px; font-weight: 700; color: #fca5a5; border-color: rgba(239, 68, 68, 0.4);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+            <circle cx="12" cy="12" r="3"></circle>
+          </svg>
+          Zakończ dyskusję i sprawdź wyniki
+        </button>
+
+        <!-- RESULTS SECTION -->
+        <div id="results-card" class="results-card">
+          <div class="word-box" style="margin-top: 10px;">
+            <div class="word-label">SEKRETNE SŁOWO TO:</div>
+            <div id="results-secret-word" class="secret-word" style="color: var(--neon-cyan);">DELFIN</div>
+            <div id="results-category" class="category-pill mt-2">Kategoria: Zwierzęta</div>
+          </div>
+
+          <h3 style="font-size: 1.15rem; font-weight: 800; margin: 20px 0 10px; text-align: left;">Przydział Ról w Tej Rundzie:</h3>
+          <div id="results-roles-list" class="results-grid">
+            <!-- Injected by app.js -->
+          </div>
+        </div>
+
+        <!-- RESTART ACTIONS -->
+        <div class="bottom-actions horizontal mt-4">
+          <button id="btn-play-again-same" type="button" class="btn-primary-neon" style="font-size: 1rem; padding: 14px 20px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
+            </svg>
+            Nowa Runda (Ten sam skład)
+          </button>
+          <button id="btn-edit-game" type="button" class="btn-secondary" style="padding: 14px 20px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+              <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+            </svg>
+            Zmień graczy / Ustawienia
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         MODAL: RULES OF THE GAME
+         ==================================================================== -->
+    <div id="modal-rules" class="modal-backdrop">
+      <div class="modal-box">
+        <div class="modal-header">
+          <h3 class="modal-title">Zasady Gry Impostor</h3>
+          <button id="btn-close-rules" class="btn-close-modal" aria-label="Zamknij">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <div class="rules-content">
+          <h4>🎯 Cel Gry</h4>
+          <p><strong>Niewinni gracze (Agenci):</strong> Waszym zadaniem jest zdemaskowanie i przegłosowanie Impostorów poprzez zadawanie pytań i uważną obserwację wypowiedzi.</p>
+          <p><strong>Impostorzy:</strong> Waszym celem jest wtopienie się w tłum, blefowanie, unikanie zdemaskowania lub odgadnięcie sekretnego hasła na koniec rundy.</p>
+
+          <h4>📱 Jak działa ta aplikacja?</h4>
+          <ul>
+            <li>Jeden telefon służy za mistrza gry (Master Screen / Pass & Play).</li>
+            <li>Wpisz imiona graczy i kliknij <strong>"Rozpocznij Grę"</strong>.</li>
+            <li>Telefon wędruje od gracza do gracza w trybie prywatnym – każdy naciska <strong>"Odkryj"</strong>, zapamiętuje swoją rolę lub słowo, a następnie klika <strong>"Ukryj i przekaż dalej"</strong>.</li>
+          </ul>
+
+          <h4>💬 Przebieg Rundy i Dyskusja</h4>
+          <ul>
+            <li>Aplikacja wskaże, kto rozpoczyna dyskusję i zadaje pierwsze pytanie.</li>
+            <li>Pytania zadaje się po kolei dowolnej wybranej osobie.</li>
+            <li><strong>Wskazówka dla Niewinnych:</strong> Nie pytajcie wprost (np. "Czy to jest żółty owoc z bananowca?"). Używajcie metafor i skojarzeń (np. "Gdzie zazwyczaj to trzymasz?").</li>
+            <li><strong>Wskazówka dla Impostorów:</strong> Słuchajcie skojarzeń innych graczy. Jeśli otrzymaliście podpowiedź – użyjcie jej, by brzmieć wiarygodnie!</li>
+          </ul>
+
+          <h4>🗳️ Głosowanie i Zwycięstwo</h4>
+          <p>Gdy minie czas na stoperze (lub gdy wszyscy uznają, że są gotowi), odliczacie 3... 2... 1... i każdy jednocześnie wskazuje palcem osobę podejrzaną o bycie Impostorem!</p>
+          <p>Osoba z największą liczbą głosów zostaje zdemaskowana. Impostor ma jednak jeszcze ostatnią szansę: <strong>jeśli prawidłowo odgadnie sekretne słowo – wygrywa całą rundę!</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOAD WORDS & APP LOGIC -->
+  <script src="words.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
